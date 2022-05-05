@@ -28,4 +28,14 @@ updateKatedra(katedraId: number){
   this.router.navigate(['update-katedra',katedraId]);
 }
 
+
+
+deleteKatedra(id: number){
+
+  this.katedraService.deleteKatedra(id).subscribe(data => {
+    console.log();
+    this.getKatedre();
+    });
+
+}
 }
