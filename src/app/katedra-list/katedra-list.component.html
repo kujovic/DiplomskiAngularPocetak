@@ -1,0 +1,23 @@
+<h2> Lista katedri: </h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id katedre </th>
+            <th>Naziv katedre </th>
+            <th>Skraceni naziv katedre</th>
+            <th>Akcije</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let katedra of katedre">
+            <td> {{ katedra.katedraId}} </td>
+            <td>   {{ katedra.nazivKatedre}} </td>
+            <td>   {{ katedra.skraceniNazivKatedre}} </td>
+            <td>      
+                <button type="button"
+                    (click)="updateKatedra(katedra.katedraId)" class="btn btn-outline-primary">Update
+                </button>    
+            </td>
+        </tr>
+    </tbody>
+</table>

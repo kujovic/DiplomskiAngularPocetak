@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+
+body{
+    margin:0;
+    padding: 0;
+    background: rgb(255, 255, 255);
+    font-family: Arial;
+}
+.navbar{
+    color: red;
+}
+.navbar ul{
+    margin:0;
+    padding: 0;
+    background: rgb(190, 186, 186);
+    list-style: none;
+}
+.navbar li{
+    display: inline-block;
+}
+.navbar a{
+    text-decoration: solid;
+    color:black;
+    width: 200spx;
+    display: block;
+    padding: 1px 20px;
+    font-weight: bold;
+    font-family: Arial;
+    text-align: center;
+}
+.navbar a:hover{
+    background: rgb(147, 146, 146);
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    height: 40px;
+    background-color: rgb(126, 126, 126);
+    text-align: center;
+    color: white;
+}

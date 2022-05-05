@@ -1,16 +1,29 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { KatedraListComponent } from './katedra-list/katedra-list.component';
+import { CreateKatedraComponent } from './create-katedra/create-katedra.component';
+import { NastavnikListComponent } from './nastavnik-list/nastavnik-list.component';
+import { PredmetListComponent } from './predmet-list/predmet-list.component';
+import { UpdateKatedraComponent } from './update-katedra/update-katedra.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    KatedraListComponent,
+    CreateKatedraComponent,
+    NastavnikListComponent,
+    PredmetListComponent,
+    UpdateKatedraComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

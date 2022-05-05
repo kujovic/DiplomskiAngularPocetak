@@ -1,0 +1,25 @@
+<h2> Lista predmeta: </h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> Id predmeta </th>
+            <th> Naziv predmeta </th>
+            <th> Semestar </th>
+            <th> Studijski program </th>
+            <th> Modul </th>
+            <th> Obavezan </th>
+            <th> Katedra </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let predmet of predmeti">
+            <td> {{predmet.predmetId}} </td>
+            <td>   {{ predmet.nazivPredmeta}} </td>
+            <td>   {{ predmet.semestar}} </td>
+            <td>   {{ predmet.studijskiProgram}} </td>
+            <td>   {{ predmet.modul}} </td>
+            <td>   {{ predmet.obavezan}} </td>
+            <td> {{predmet.katedra.nazivKatedre}}</td>
+        </tr>
+    </tbody>
+</table>
