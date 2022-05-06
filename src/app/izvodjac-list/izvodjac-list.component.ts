@@ -10,6 +10,7 @@ import { IzvodjacService } from '../izvodjac.service';
 export class IzvodjacListComponent implements OnInit {
 
   izvodjaci!: Izvodjac[];
+  searchValue!: string;
 
   constructor(private izvodjacService: IzvodjacService) { }
 

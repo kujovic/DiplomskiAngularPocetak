@@ -10,6 +10,8 @@ import { NastavnikListComponent } from './nastavnik-list/nastavnik-list.componen
 import { PredmetListComponent } from './predmet-list/predmet-list.component';
 import { UpdateKatedraComponent } from './update-katedra/update-katedra.component';
 import { IzvodjacListComponent } from './izvodjac-list/izvodjac-list.component';
+import { SearchfilterPipe } from './searchfilter.pipe';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { IzvodjacListComponent } from './izvodjac-list/izvodjac-list.component';
     NastavnikListComponent,
     PredmetListComponent,
     UpdateKatedraComponent,
-    IzvodjacListComponent
+    IzvodjacListComponent,
+    SearchfilterPipe,
+    
   ],
   imports: [
     BrowserModule,

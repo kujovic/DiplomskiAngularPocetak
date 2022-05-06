@@ -16,6 +16,7 @@ const routes: Routes = [
   {path: 'nastavnici', component: NastavnikListComponent},
   {path: 'predmeti', component: PredmetListComponent},
   {path: 'izvodjaci', component: IzvodjacListComponent},
+  {path: 'izvodjaci/izvodjaci', redirectTo: 'izvodjaci',pathMatch:'full'},
   {path: '', redirectTo: 'katedre',pathMatch:'full'}
 ];
 
