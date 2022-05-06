@@ -1,26 +1,27 @@
 <div class="col-md-6 offset-md-3">
-<h3> Kreiraj katedru</h3>
-<form (ngSubmit) = "onSubmit()">
+    <br>
+    <h3> Kreiraj katedru</h3>
+    <br>
+    <form (ngSubmit)="onSubmit()">
 
 
-    <div class="form-group">
-        <label>Id katedre</label>
-        <input type="text" class="form-control" id = "katedraId"
-            [(ngModel)] = "katedra.katedraId" name="katedraId">
-    </div>
+        <div class="form-group">
+            <label>Id katedre</label>
+            <input type="text" class="form-control" id="katedraId" [(ngModel)]="katedra.katedraId" name="katedraId">
+        </div>
 
-    <div class="form-group">
-        <label>Naziv katedre</label>
-        <input type="text" class="form-control" id = "nazivKatedre"
-            [(ngModel)] = "katedra.nazivKatedre" name="nazivKatedre">
-    </div>
+        <div class="form-group">
+            <label>Naziv katedre</label>
+            <input type="text" class="form-control" id="nazivKatedre" [(ngModel)]="katedra.nazivKatedre"
+                name="nazivKatedre">
+        </div>
 
-    <div class="form-group">
-        <label>Skraceni naziv katedre</label>
-        <input type="text" class="form-control" id = "skraceniNazivKatedre"
-            [(ngModel)] = "katedra.skraceniNazivKatedre" name="skraceniNazivKatedre">
-    </div>
+        <div class="form-group">
+            <label>Skraćeni naziv katedre</label>
+            <input type="text" class="form-control" id="skraceniNazivKatedre" [(ngModel)]="katedra.skraceniNazivKatedre"
+                name="skraceniNazivKatedre">
+        </div>
 
-    <button class = "btn btn-success" type="submit">Sačuvaj</button>
-</form>
+        <button class="btn btn-success" type="submit">Sačuvaj</button>
+    </form>
 </div>

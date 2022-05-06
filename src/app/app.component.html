@@ -1,4 +1,48 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Katedra
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
+          <a style="text-align: left;" class="dropdown-item" href="katedre">Lista katedri</a>
+          <a style="text-align: left;" class="dropdown-item" href="create-katedra">Kreiraj katedru</a>
+         
+        </div>
+      </li>
+
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Nastavnik
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
+          <a style="text-align: left;" class="dropdown-item" href="nastavnici">Lista nastavnika</a>
+       
+        </div>
+      </li>
+
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Predmet
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
+          <a style="text-align: left;" class="dropdown-item" href="predmeti">Lista predmeta</a>
+       
+        </div>
+      </li>
+
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Izvođač
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
+          <a style="text-align: left;" class="dropdown-item" href="izvodjaci">Lista izvođača</a>
+       
+        </div>
+      </li>
     <!-- <ul class="navbar-nav">
 
         <li class="nav-item active">
@@ -35,8 +79,11 @@
         </div>
     </div> -->
 
+
+
+
     <!-- Dugme za KATEDRU -->
-    <div class="btn-group" style="margin-left: 10px;">
+   <!--  <div class="btn-group" style="margin-left: 10px;">
         <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-lg" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             Katedra
@@ -47,7 +94,7 @@
         </div>
     </div>
 
-    <!-- Dugme za NASTAVNIKA -->
+   <!-- Dugme za NASTAVNIKA 
     <div class="btn-group" style="margin-left: 10px;">
         <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-lg" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
@@ -58,7 +105,7 @@
         </div>
     </div>
 
-    <!-- Dugme za PREDMET -->
+    Dugme za PREDMET 
     <div class="btn-group" style="margin-left: 10px;">
         <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-lg" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
@@ -70,21 +117,21 @@
     </div>
 
 
-    <!-- Dugme za IZVODJACA -->
+ Dugme za IZVODJACA 
     <div class="btn-group" style="margin-left: 10px;">
         <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-lg" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            Izvodjac
+            Izvodjač
         </button>
         <div class="dropdown-menu">
-            <a routerLink="izvodjaci" routerLinkActive="active" class="nav link">Lista izvodjaca</a>
+            <a routerLink="izvodjaci" routerLinkActive="active" class="nav link">Lista izvodjača</a>
         </div>
     </div>
-
+ -->
 </nav>
 
-
-<h1 class="text-center">{{title}}</h1>
+<br>
+<h2 class="text-center">{{title}}</h2>
 <div class="container">
     <router-outlet></router-outlet>
 </div>
