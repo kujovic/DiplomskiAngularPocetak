@@ -1,0 +1,21 @@
+<h2> Lista izvodjaca: </h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Ime i prezime nastavnika</th>
+            <th>Naziv predmeta</th>
+            <th>Vrsta uloge</th>
+            <th>Školska godina</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let izvodjac of izvodjaci">
+          <!--  <td> {{ katedra.katedraId}} </td>-->
+          <td>{{izvodjac.nastavnik.imePrezime}}</td>
+          <td>{{izvodjac.predmet.nazivPredmeta}}</td>
+          <td>{{izvodjac.uloga.vrstaUloge}}</td>
+          <td>{{izvodjac.godina.kalendarskaGodina}}</td>
+        </tr>
+    </tbody>
+</table>

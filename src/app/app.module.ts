@@ -9,6 +9,7 @@ import { CreateKatedraComponent } from './create-katedra/create-katedra.componen
 import { NastavnikListComponent } from './nastavnik-list/nastavnik-list.component';
 import { PredmetListComponent } from './predmet-list/predmet-list.component';
 import { UpdateKatedraComponent } from './update-katedra/update-katedra.component';
+import { IzvodjacListComponent } from './izvodjac-list/izvodjac-list.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { UpdateKatedraComponent } from './update-katedra/update-katedra.componen
     CreateKatedraComponent,
     NastavnikListComponent,
     PredmetListComponent,
-    UpdateKatedraComponent
+    UpdateKatedraComponent,
+    IzvodjacListComponent
   ],
   imports: [
     BrowserModule,

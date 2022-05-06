@@ -2,7 +2,7 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <th> Id nastavnika </th>
+            <!-- <th> Id nastavnika </th> -->
             <th> Ime i prezime nastavnika </th>
             <th> Broj telefona nastavnika </th>
             <th> Status nastavnika </th>
@@ -11,10 +11,10 @@
     </thead>
     <tbody>
         <tr *ngFor="let nastavnik of nastavnici">
-            <td> {{nastavnik.nastavnikId }} </td>
-            <td>   {{ nastavnik.imePrezime}} </td>
-            <td>   {{ nastavnik.brojTelefona}} </td>
-            <td>   {{ nastavnik.status}} </td>
+           <!--  <td> {{nastavnik.nastavnikId }} </td> -->
+            <td> {{ nastavnik.imePrezime}} </td>
+            <td> {{ nastavnik.brojTelefona}} </td>
+            <td> {{ nastavnik.status}} </td>
             <td> {{nastavnik.katedra.nazivKatedre}}</td>
         </tr>
     </tbody>

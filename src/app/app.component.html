@@ -1,12 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <ul class="navbar-nav">
-        
+    <!-- <ul class="navbar-nav">
+
         <li class="nav-item active">
             <a routerLink="katedre" routerLinkActive="active" class="nav link">Lista katedri</a>
         </li>
 
         <li class="nav-item active">
-            <a routerLink="create-katedra"  routerLinkActive="active" class="nav link" >Kreiraj katedru</a>
+            <a routerLink="create-katedra" routerLinkActive="active" class="nav link">Kreiraj katedru</a>
         </li>
 
         <li class="nav-item active">
@@ -16,9 +16,71 @@
         <li class="nav-item active">
             <a routerLink="predmeti" routerLinkActive="active" class="nav link">Lista predmeta</a>
         </li>
-        
-    </ul>
-    
+
+    </ul> -->
+
+
+   <!--  <div class="btn-group">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            Action
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a routerLink="predmeti" routerLinkActive="active" class="nav link">Lista predmeta</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+        </div>
+    </div> -->
+
+    <!-- Dugme za KATEDRU -->
+    <div class="btn-group" style="margin-left: 10px;">
+        <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-lg" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Katedra
+        </button>
+        <div class="dropdown-menu">
+            <a routerLink="katedre" routerLinkActive="active" class="nav link">Lista katedri</a>
+            <a routerLink="create-katedra" routerLinkActive="active" class="nav link">Kreiraj katedru</a>
+        </div>
+    </div>
+
+    <!-- Dugme za NASTAVNIKA -->
+    <div class="btn-group" style="margin-left: 10px;">
+        <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-lg" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Nastavnik
+        </button>
+        <div class="dropdown-menu">
+            <a routerLink="nastavnici" routerLinkActive="active" class="nav link">Lista nastavnika</a>
+        </div>
+    </div>
+
+    <!-- Dugme za PREDMET -->
+    <div class="btn-group" style="margin-left: 10px;">
+        <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-lg" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Predmet
+        </button>
+        <div class="dropdown-menu">
+            <a routerLink="predmeti" routerLinkActive="active" class="nav link">Lista predmeta</a>
+        </div>
+    </div>
+
+
+    <!-- Dugme za IZVODJACA -->
+    <div class="btn-group" style="margin-left: 10px;">
+        <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-lg" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Izvodjac
+        </button>
+        <div class="dropdown-menu">
+            <a routerLink="izvodjaci" routerLinkActive="active" class="nav link">Lista izvodjaca</a>
+        </div>
+    </div>
+
 </nav>
 
 
@@ -28,7 +90,7 @@
 </div>
 
 
-<footer class = "footer">
+<footer class="footer">
     <div class="container">
         <span>Fakultet organizacionih nauka</span>
 

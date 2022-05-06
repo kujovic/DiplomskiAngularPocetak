@@ -38,4 +38,5 @@ deleteKatedra(id: number){
     });
 
 }
+
 }
