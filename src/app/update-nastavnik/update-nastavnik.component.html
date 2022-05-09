@@ -1,0 +1,41 @@
+
+<div class="col-md-6 offset-md-3">
+    <br>
+    <h3> Ažuriraj nastavnika</h3>
+    
+    <form (ngSubmit) = "onSubmit()">
+    
+    
+        <div class="form-group">
+            <label>Id nastavnika</label>
+            <input type="text" class="form-control" id = "nastavnikId"
+                [(ngModel)] = "nastavnik.nastavnikId" name="nastavnikId" readonly>
+        </div>
+    
+        <div class="form-group">
+            <label>Ime i prezime nastavnika</label>
+            <input type="text" class="form-control" id = "imePrezime"
+                [(ngModel)] = "nastavnik.imePrezime" name="imePrezime">
+        </div>
+    
+        <div class="form-group">
+            <label>Broj telefona nastavnika</label>
+            <input type="text" class="form-control" id = "brojTelefona"
+                [(ngModel)] = "nastavnik.brojTelefona" name="brojTelefona">
+        </div>
+
+        <div class="form-group">
+            <label>Status nastavnika</label>
+            <input type="text" class="form-control" id = "status"
+                [(ngModel)] = "nastavnik.status" name="status">
+        </div>
+
+        <div class="form-group">
+            <label>Katedra</label>
+            <input type="text" class="form-control" id = "katedra.nazivKatedre"
+                [(ngModel)] = "nastavnik.katedra.nazivKatedre" name="katedra.nazivKatedre" readonly>
+        </div>
+    
+        <button class = "btn btn-success" type="submit">Sačuvaj</button>
+    </form>
+    </div>

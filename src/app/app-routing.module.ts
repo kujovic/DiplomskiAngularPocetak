@@ -6,6 +6,7 @@ import { KatedraListComponent } from './katedra-list/katedra-list.component';
 import { NastavnikListComponent } from './nastavnik-list/nastavnik-list.component';
 import { PredmetListComponent } from './predmet-list/predmet-list.component';
 import { UpdateKatedraComponent } from './update-katedra/update-katedra.component';
+import { UpdateNastavnikComponent } from './update-nastavnik/update-nastavnik.component';
 
 const routes: Routes = [
   {path: 'katedre', component: KatedraListComponent},
@@ -14,6 +15,10 @@ const routes: Routes = [
 
 
   {path: 'nastavnici', component: NastavnikListComponent},
+  {path: 'update-nastavnik/:id', component: UpdateNastavnikComponent},
+  {path: 'nastavnici/nastavnici', redirectTo: 'nastavnici',pathMatch:'full'},
+
+
   {path: 'predmeti', component: PredmetListComponent},
   {path: 'izvodjaci', component: IzvodjacListComponent},
   {path: 'izvodjaci/izvodjaci', redirectTo: 'izvodjaci',pathMatch:'full'},

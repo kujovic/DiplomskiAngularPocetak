@@ -8,6 +8,7 @@
             <th> Broj telefona nastavnika </th>
             <th> Status nastavnika </th>
             <th> Katedra </th>
+            <th> Akcije</th>
         </tr>
     </thead>
     <tbody>
@@ -17,6 +18,14 @@
             <td> {{ nastavnik.brojTelefona}} </td>
             <td> {{ nastavnik.status}} </td>
             <td> {{nastavnik.katedra.nazivKatedre}}</td>
+            <td>      
+                <button type="button"
+                    (click)="updateNastavnik(nastavnik.nastavnikId)" class="btn btn-outline-primary">Ažuriraj
+                </button>
+                <button type="button"
+                    (click)="deleteNastavnik(nastavnik.nastavnikId)" class="btn btn-outline-danger" style="margin-left: 10px;">Obriši
+                </button>
+            </td>
         </tr>
     </tbody>
 </table>

@@ -11,6 +11,7 @@ import { PredmetListComponent } from './predmet-list/predmet-list.component';
 import { UpdateKatedraComponent } from './update-katedra/update-katedra.component';
 import { IzvodjacListComponent } from './izvodjac-list/izvodjac-list.component';
 import { SearchfilterPipe } from './searchfilter.pipe';
+import { UpdateNastavnikComponent } from './update-nastavnik/update-nastavnik.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { SearchfilterPipe } from './searchfilter.pipe';
     UpdateKatedraComponent,
     IzvodjacListComponent,
     SearchfilterPipe,
+    UpdateNastavnikComponent,
     
   ],
   imports: [

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Nastavnik } from '../nastavnik';
 import { NastavnikService } from '../nastavnik.service';
 @Component({
@@ -9,7 +10,8 @@ import { NastavnikService } from '../nastavnik.service';
 export class NastavnikListComponent implements OnInit {
 
   nastavnici!: Nastavnik[];
-  constructor(private nastavnikService: NastavnikService) { }
+  constructor(private nastavnikService: NastavnikService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.getNastavnici();
@@ -19,4 +21,13 @@ export class NastavnikListComponent implements OnInit {
     this.nastavnikService.getListaNastavnika().subscribe(response => this.nastavnici=response);
  }
 
+ updateNastavnik(nastavnikId: number){
+  this.router.navigate(['update-nastavnik',nastavnikId]);
+}
+deleteNastavnik(nastavnikId: number){
+  this.nastavnikService.deleteNastavnik(nastavnikId).subscribe(data => {
+    console.log();
+    this.getNastavnici();
+    });
+}
 }
