@@ -10,6 +10,7 @@
             <th> Modul </th>
             <th> Obavezan </th>
             <th> Katedra </th>
+            <th> Akcije</th>
         </tr>
     </thead>
     <tbody>
@@ -21,6 +22,14 @@
             <td>   {{ predmet.modul}} </td>
             <td>   {{ predmet.obavezan}} </td>
             <td> {{predmet.katedra.nazivKatedre}}</td>
+            <td>      
+                <button type="button"
+                    (click)="updatePredmet(predmet.predmetId)" class="btn btn-outline-primary">Ažuriraj
+                </button>
+                <button type="button"
+                    (click)="deletePredmet(predmet.predmetId)" class="btn btn-outline-danger" style="margin-left: 10px;">Obriši
+                </button>
+            </td>
         </tr>
     </tbody>
 </table>

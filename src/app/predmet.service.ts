@@ -8,11 +8,25 @@ import { Observable } from 'rxjs';
 })
 export class PredmetService {
 
-  private baseUrl="http://localhost:8080/predmet/all";
+  private getAllUrl="http://localhost:8080/predmet/all";
+  private getUrl = "http://localhost:8080/predmet/get";
+  private updateUrl = "http://localhost:8080/predmet/update";
+  private deleteUrl = "http://localhost:8080/predmet/delete";
 
   constructor(private httpClient: HttpClient) {}
    
   getListaPredmeta(): Observable<Predmet[]>{
-    return this.httpClient.get<Predmet[]>(this.baseUrl);
+    return this.httpClient.get<Predmet[]>(this.getAllUrl);
+  }
+
+  getPredmetById(id: number): Observable<Predmet> {
+    return this.httpClient.get<Predmet>(`${this.getUrl}/${id}`);
+  }
+
+  updatePredmet(id: number, predmet: Predmet): Observable<Object> {
+    return this.httpClient.put(`${this.updateUrl}/${id}`, predmet);
+  }
+  deletePredmet(id: number): Observable<Object> {
+    return this.httpClient.delete(`${this.deleteUrl}/${id}`);
   }
 }

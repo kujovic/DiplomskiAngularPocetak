@@ -1,0 +1,46 @@
+
+<div class="col-md-6 offset-md-3">
+    <br>
+    <h3> Ažuriraj predmet</h3>
+    
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label>Id predmeta</label>
+            <input type="text" class="form-control" id = "predmetId"
+                [(ngModel)] = "predmet.predmetId" name="predmetId" readonly>
+        </div>
+    
+        <div class="form-group">
+            <label>Semestar</label>
+            <input type="text" class="form-control" id = "semestar"
+                [(ngModel)] = "predmet.semestar" name="semestar">
+        </div>
+    
+        <div class="form-group">
+            <label>Studijski program</label>
+            <input type="text" class="form-control" id = "studijskiProgram"
+                [(ngModel)] = "predmet.studijskiProgram" name="studijskiProgram">
+        </div>
+
+        <div class="form-group">
+            <label>Modul</label>
+            <input type="text" class="form-control" id = "modul"
+                [(ngModel)] = "predmet.modul" name="modul">
+        </div>
+
+        <div class="form-group">
+            <label>Obavezan</label>
+            <input type="text" class="form-control" id = "obavezan"
+                [(ngModel)] = "predmet.obavezan" name="obavezan">
+        </div>
+
+      <!--   <div class="form-group">
+            <label>Katedra</label>
+            <input type="text" class="form-control" id = "predmet.nazivKatedre"
+                [(ngModel)] = "predmet.katedra.nazivKatedre" name="predmet.nazivKatedre" readonly>
+        </div> -->
+    
+        <button class = "btn btn-success" type="submit">Sačuvaj</button>
+    </form>
+    </div>
