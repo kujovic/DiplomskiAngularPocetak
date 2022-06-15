@@ -7,5 +7,6 @@ export class Predmet {
     studijskiProgram!: string;
     modul!: string;
     obavezan!: boolean;
+    espb!: number;
     katedra!: Katedra;
 }

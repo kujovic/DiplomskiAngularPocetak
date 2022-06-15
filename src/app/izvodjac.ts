@@ -9,4 +9,7 @@ export class Izvodjac {
     predmet!: Predmet;
     uloga!: Uloga;
     godina!: Godina;
+    pozicija!: number;
+    semestar!: number;
+
 }

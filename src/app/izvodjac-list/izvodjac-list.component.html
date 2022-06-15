@@ -23,22 +23,124 @@
 
     </div>
 
+<h2> Prva Godina </h2>
+<br>
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>Ime i prezime nastavnika</th>
+            <th>R.br.</th>
             <th>Naziv predmeta</th>
-            <th>Vrsta uloge</th>
-            <th>Školska godina</th>
+            <th>Semestar</th>
+            <th>ESPB</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr *ngFor="let izvodjac of izvodjaci  | searchfilter:searchValue" >
+        
+          <!--  <td> {{ katedra.katedraId}} </td>
+          <td>{{izvodjac.nastavnik.imePrezime}}</td>
+          <td>{{izvodjac.predmet.nazivPredmeta}}</td>
+          <td>{{izvodjac.uloga.vrstaUloge}}</td>
+          <td>{{izvodjac.godina.kalendarskaGodina}}</td>  -->
+          <td *ngIf="izvodjac.semestar==2">  {{izvodjac.pozicija}} </td>
+          <td *ngIf="izvodjac.semestar==2">{{izvodjac.predmet.nazivPredmeta}}</td>
+          <td *ngIf="izvodjac.semestar==2">{{izvodjac.semestar}}</td>
+          <td *ngIf="izvodjac.semestar==2"> {{izvodjac.predmet.espb}}</td>
+       
+     </tr>
+
+    </tbody>
+
+</table>
+<br>
+
+<h2> Druga Godina </h2>
+<br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>R.br.</th>
+            <th>Naziv predmeta</th>
+            <th>Semestar</th>
+            <th>ESPB</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let izvodjac of izvodjaci | searchfilter:searchValue" >
+          <!--  <td> {{ katedra.katedraId}} </td>
+          <td>{{izvodjac.nastavnik.imePrezime}}</td>
+          <td>{{izvodjac.predmet.nazivPredmeta}}</td>
+          <td>{{izvodjac.uloga.vrstaUloge}}</td>
+          <td>{{izvodjac.godina.kalendarskaGodina}}</td>  -->
+          <td>{{izvodjac.pozicija}} </td>
+          <td>{{izvodjac.predmet.nazivPredmeta}}</td>
+          <td>{{izvodjac.semestar}}</td>
+          <td>{{izvodjac.predmet.espb}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+
+<h2> Treća Godina </h2>
+<br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>R.br.</th>
+            <th>Naziv predmeta</th>
+            <th>Semestar</th>
+            <th>ESPB</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let izvodjac of izvodjaci | searchfilter:searchValue" >
+          <!--  <td> {{ katedra.katedraId}} </td>
+          <td>{{izvodjac.nastavnik.imePrezime}}</td>
+          <td>{{izvodjac.predmet.nazivPredmeta}}</td>
+          <td>{{izvodjac.uloga.vrstaUloge}}</td>
+          <td>{{izvodjac.godina.kalendarskaGodina}}</td> -->
+          <td>{{izvodjac.pozicija}} </td>
+          <td>{{izvodjac.predmet.nazivPredmeta}}</td>
+          <td>{{izvodjac.semestar}}</td>
+          <td>{{izvodjac.predmet.espb}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+
+<h2> Četvrta Godina </h2>
+<br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>R.br.</th>
+            <th>Naziv predmeta</th>
+            <th>Semestar</th>
+            <th>ESPB</th>
+            <th></th>
+ <!--           <th>Vrsta uloge</th>
+            <th>Školska godina</th> -->
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let izvodjac of izvodjaci | searchfilter:searchValue" >
           <!--  <td> {{ katedra.katedraId}} </td>-->
-          <td>{{izvodjac.nastavnik.imePrezime}}</td>
+     <!--      <td>{{izvodjac.nastavnik.imePrezime}}</td>
           <td>{{izvodjac.predmet.nazivPredmeta}}</td>
           <td>{{izvodjac.uloga.vrstaUloge}}</td>
-          <td>{{izvodjac.godina.kalendarskaGodina}}</td>
+          <td>{{izvodjac.godina.kalendarskaGodina}}</td> -->
+          <td>{{izvodjac.pozicija}} </td>
+          <td>{{izvodjac.predmet.nazivPredmeta}}</td>
+          <td>{{izvodjac.semestar}}</td>
+          <td>{{izvodjac.predmet.espb}}</td>
+
+
         </tr>
     </tbody>
 </table>

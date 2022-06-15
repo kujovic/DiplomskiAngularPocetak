@@ -15,6 +15,7 @@ import { UpdateNastavnikComponent } from './update-nastavnik/update-nastavnik.co
 import { UpdatePredmetComponent } from './update-predmet/update-predmet.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,7 @@ import { UpdatePredmetComponent } from './update-predmet/update-predmet.componen
     IzvodjacListComponent,
     SearchfilterPipe,
     UpdateNastavnikComponent,
-    UpdatePredmetComponent,
+    UpdatePredmetComponent
     
   ],
   imports: [
