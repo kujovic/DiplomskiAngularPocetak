@@ -1,7 +1,7 @@
 <br>
-<h3> Lista izvodjača </h3>
+<h3>  </h3>
 
- <!-- <div class="btn-group" style="margin-bottom: 10px;">
+<!-- <div class="btn-group" style="margin-bottom: 10px;">
     <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown"
     aria-haspopup="true" aria-expanded="false">
             Izaberi godinu:
@@ -14,15 +14,16 @@
         </div>
     </div> -->
 
-    <br>
-    <div class="form-group row" >
-        <label for="search" class="col-sm-1 col-form-label" style="text-align: left;">Pretraži</label>
-        <div class="col-sm-2" >
-            <input type="text" [(ngModel)]="searchValue" class="form-control" id="search" />
-        </div>
-
+<br>
+<!--
+<div class="form-group row">
+    <label for="search" class="col-sm-1 col-form-label" style="text-align: left;">Pretraži</label>
+    <div class="col-sm-2">
+        <input type="text" [(ngModel)]="searchValue" class="form-control" id="search" />
     </div>
 
+</div>
+-->
 <h2> Prva Godina </h2>
 <br>
 <table class="table table-striped">
@@ -30,26 +31,33 @@
         <tr>
             <th>R.br.</th>
             <th>Naziv predmeta</th>
+            <th>Naziv katedre</th>
             <th>Semestar</th>
             <th>ESPB</th>
-            <th></th>
+            <th>Dodatno</th>
         </tr>
     </thead>
     <tbody>
-        
-        <tr *ngFor="let izvodjac of izvodjaci  | searchfilter:searchValue" >
-        
-          <!--  <td> {{ katedra.katedraId}} </td>
+
+        <tr *ngFor="let izvodjac of izvodjaci  | searchfilter:searchValue">
+
+            <!--  <td> {{ katedra.katedraId}} </td>
           <td>{{izvodjac.nastavnik.imePrezime}}</td>
           <td>{{izvodjac.predmet.nazivPredmeta}}</td>
           <td>{{izvodjac.uloga.vrstaUloge}}</td>
           <td>{{izvodjac.godina.kalendarskaGodina}}</td>  -->
-          <td *ngIf="izvodjac.semestar==2">  {{izvodjac.pozicija}} </td>
-          <td *ngIf="izvodjac.semestar==2">{{izvodjac.predmet.nazivPredmeta}}</td>
-          <td *ngIf="izvodjac.semestar==2">{{izvodjac.semestar}}</td>
-          <td *ngIf="izvodjac.semestar==2"> {{izvodjac.predmet.espb}}</td>
-       
-     </tr>
+            <td *ngIf="izvodjac.semestar==1 || izvodjac.semestar==2"> {{izvodjac.pozicija}} </td>
+            <td *ngIf="izvodjac.semestar==1 || izvodjac.semestar==2">{{izvodjac.predmet.nazivPredmeta}}</td>
+            <td *ngIf="izvodjac.semestar==1 || izvodjac.semestar==2">{{izvodjac.predmet.katedra.skraceniNazivKatedre}}
+            </td>
+            <td *ngIf="izvodjac.semestar==1 || izvodjac.semestar==2">{{izvodjac.semestar}}</td>
+            <td *ngIf="izvodjac.semestar==1 || izvodjac.semestar==2"> {{izvodjac.predmet.espb}}</td>
+            <td *ngIf="izvodjac.semestar==1 || izvodjac.semestar==2">
+                <button type="button" (click)="izvodjacInfo(izvodjac.predmet.predmetId)"
+                    class="btn btn-outline-info">Info
+                </button>
+            </td>
+        </tr>
 
     </tbody>
 
@@ -63,22 +71,31 @@
         <tr>
             <th>R.br.</th>
             <th>Naziv predmeta</th>
+            <th>Naziv katedre</th>
             <th>Semestar</th>
             <th>ESPB</th>
-            <th></th>
+            <th>Dodatno</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let izvodjac of izvodjaci | searchfilter:searchValue" >
-          <!--  <td> {{ katedra.katedraId}} </td>
+        <tr *ngFor="let izvodjac of izvodjaci | searchfilter:searchValue">
+            <!--  <td> {{ katedra.katedraId}} </td>
           <td>{{izvodjac.nastavnik.imePrezime}}</td>
           <td>{{izvodjac.predmet.nazivPredmeta}}</td>
           <td>{{izvodjac.uloga.vrstaUloge}}</td>
           <td>{{izvodjac.godina.kalendarskaGodina}}</td>  -->
-          <td>{{izvodjac.pozicija}} </td>
-          <td>{{izvodjac.predmet.nazivPredmeta}}</td>
-          <td>{{izvodjac.semestar}}</td>
-          <td>{{izvodjac.predmet.espb}}</td>
+            <td *ngIf="izvodjac.semestar==3 || izvodjac.semestar==4">{{izvodjac.pozicija}} </td>
+            <td *ngIf="izvodjac.semestar==3 || izvodjac.semestar==4">{{izvodjac.predmet.nazivPredmeta}}</td>
+            <td *ngIf="izvodjac.semestar==3 || izvodjac.semestar==4">{{izvodjac.predmet.katedra.skraceniNazivKatedre}}
+            </td>
+            <td *ngIf="izvodjac.semestar==3 || izvodjac.semestar==4">{{izvodjac.semestar}}</td>
+            <td *ngIf="izvodjac.semestar==3 || izvodjac.semestar==4">{{izvodjac.predmet.espb}}</td>
+            <td *ngIf="izvodjac.semestar==3 || izvodjac.semestar==4">
+                <button type="button" (click)="izvodjacInfo(izvodjac.predmet.predmetId)"
+                    class="btn btn-outline-info">Info
+                </button>
+            </td>
+
         </tr>
     </tbody>
 </table>
@@ -92,22 +109,30 @@
         <tr>
             <th>R.br.</th>
             <th>Naziv predmeta</th>
+            <th>Naziv katedre</th>
             <th>Semestar</th>
             <th>ESPB</th>
-            <th></th>
+            <th>Dodatno</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let izvodjac of izvodjaci | searchfilter:searchValue" >
-          <!--  <td> {{ katedra.katedraId}} </td>
+        <tr *ngFor="let izvodjac of izvodjaci | searchfilter:searchValue">
+            <!--  <td> {{ katedra.katedraId}} </td>
           <td>{{izvodjac.nastavnik.imePrezime}}</td>
           <td>{{izvodjac.predmet.nazivPredmeta}}</td>
           <td>{{izvodjac.uloga.vrstaUloge}}</td>
           <td>{{izvodjac.godina.kalendarskaGodina}}</td> -->
-          <td>{{izvodjac.pozicija}} </td>
-          <td>{{izvodjac.predmet.nazivPredmeta}}</td>
-          <td>{{izvodjac.semestar}}</td>
-          <td>{{izvodjac.predmet.espb}}</td>
+            <td *ngIf="izvodjac.semestar==5 || izvodjac.semestar==6"> {{izvodjac.pozicija}} </td>
+            <td *ngIf="izvodjac.semestar==5 || izvodjac.semestar==6">{{izvodjac.predmet.nazivPredmeta}}</td>
+            <td *ngIf="izvodjac.semestar==5 || izvodjac.semestar==6">{{izvodjac.predmet.katedra.skraceniNazivKatedre}}
+            </td>
+            <td *ngIf="izvodjac.semestar==5 || izvodjac.semestar==6">{{izvodjac.semestar}}</td>
+            <td *ngIf="izvodjac.semestar==5 || izvodjac.semestar==6">{{izvodjac.predmet.espb}}</td>
+            <td *ngIf="izvodjac.semestar==5 || izvodjac.semestar==6">
+                <button type="button" (click)="izvodjacInfo(izvodjac.predmet.predmetId)"
+                    class="btn btn-outline-info">Info
+                </button>
+            </td>
         </tr>
     </tbody>
 </table>
@@ -121,24 +146,32 @@
         <tr>
             <th>R.br.</th>
             <th>Naziv predmeta</th>
+            <th>Naziv katedre</th>
             <th>Semestar</th>
             <th>ESPB</th>
-            <th></th>
- <!--           <th>Vrsta uloge</th>
+            <th>Dodatno</th>
+            <!--           <th>Vrsta uloge</th>
             <th>Školska godina</th> -->
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let izvodjac of izvodjaci | searchfilter:searchValue" >
-          <!--  <td> {{ katedra.katedraId}} </td>-->
-     <!--      <td>{{izvodjac.nastavnik.imePrezime}}</td>
+        <tr *ngFor="let izvodjac of izvodjaci | searchfilter:searchValue">
+            <!--  <td> {{ katedra.katedraId}} </td>-->
+            <!--      <td>{{izvodjac.nastavnik.imePrezime}}</td>
           <td>{{izvodjac.predmet.nazivPredmeta}}</td>
           <td>{{izvodjac.uloga.vrstaUloge}}</td>
           <td>{{izvodjac.godina.kalendarskaGodina}}</td> -->
-          <td>{{izvodjac.pozicija}} </td>
-          <td>{{izvodjac.predmet.nazivPredmeta}}</td>
-          <td>{{izvodjac.semestar}}</td>
-          <td>{{izvodjac.predmet.espb}}</td>
+            <td *ngIf="izvodjac.semestar==7 || izvodjac.semestar==8">{{izvodjac.pozicija}} </td>
+            <td *ngIf="izvodjac.semestar==7 || izvodjac.semestar==8">{{izvodjac.predmet.nazivPredmeta}}</td>
+            <td *ngIf="izvodjac.semestar==7 || izvodjac.semestar==8">{{izvodjac.predmet.katedra.skraceniNazivKatedre}}
+            </td>
+            <td *ngIf="izvodjac.semestar==7 || izvodjac.semestar==8">{{izvodjac.semestar}}</td>
+            <td *ngIf="izvodjac.semestar==7 || izvodjac.semestar==8">{{izvodjac.predmet.espb}}</td>
+            <td *ngIf="izvodjac.semestar==7 || izvodjac.semestar==8">
+                <button type="button" (click)="izvodjacInfo(izvodjac.predmet.predmetId)"
+                    class="btn btn-outline-info">Info
+                </button>
+            </td>
 
 
         </tr>

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CreateKatedraComponent } from './create-katedra/create-katedra.component';
+import { IzvodjacInfoComponent } from './izvodjac-info/izvodjac-info.component';
 import { IzvodjacListComponent } from './izvodjac-list/izvodjac-list.component';
 import { KatedraListComponent } from './katedra-list/katedra-list.component';
 import { NastavnikListComponent } from './nastavnik-list/nastavnik-list.component';
@@ -26,6 +27,9 @@ const routes: Routes = [
 
   {path: 'izvodjaci', component: IzvodjacListComponent},
   {path: 'izvodjaci/izvodjaci', redirectTo: 'izvodjaci',pathMatch:'full'},
+
+  {path: 'izvodjaci-info/:id', component: IzvodjacInfoComponent},
+
   {path: '', redirectTo: 'katedre',pathMatch:'full'}
 ];
 

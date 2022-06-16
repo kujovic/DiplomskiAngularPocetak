@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Izvodjac } from '../izvodjac';
 import { IzvodjacService } from '../izvodjac.service';
 
@@ -12,7 +13,8 @@ export class IzvodjacListComponent implements OnInit {
   izvodjaci!: Izvodjac[];
   searchValue!: string;
 
-  constructor(private izvodjacService: IzvodjacService) { }
+  constructor(private izvodjacService: IzvodjacService,
+    private router:Router) { }
 
   ngOnInit(): void {
     this.getListaIzvodjaca();
@@ -22,6 +24,10 @@ export class IzvodjacListComponent implements OnInit {
     this.izvodjacService.getListaIzvodjaca().subscribe(data=>{
       this.izvodjaci= data;
     });
+  }
+
+  izvodjacInfo(id: number){
+    this.router.navigate(['izvodjaci-info',id]);
   }
 
 }

@@ -1,0 +1,41 @@
+<br>
+
+
+<h3> Detalji izvođenja  </h3>
+
+<br>
+
+
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Naziv predmeta</th>
+                <th>Ime i prezime nastavnika</th>
+                <th>Uloga</th>
+                <th>Akcije</th>
+
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr *ngFor="let izvodjac of izvodjaci">
+    
+                <!--  <td> {{ katedra.katedraId}} </td>
+              <td>{{izvodjac.nastavnik.imePrezime}}</td>
+              <td>{{izvodjac.predmet.nazivPredmeta}}</td>
+              <td>{{izvodjac.uloga.vrstaUloge}}</td>
+              <td>{{izvodjac.godina.kalendarskaGodina}}</td>  -->
+                <td> {{izvodjac.predmet.nazivPredmeta}}</td>
+                <td>{{izvodjac.nastavnik.imePrezime}}</td>
+                <td>{{izvodjac.uloga.vrstaUloge}}</td>
+                <td><button type="button" 
+                    class="btn btn-outline-danger">Izmeni
+                </button>    
+            </td>
+            </tr>
+    
+        </tbody>
+    
+    </table>
+
