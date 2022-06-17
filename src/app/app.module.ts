@@ -15,6 +15,7 @@ import { UpdateNastavnikComponent } from './update-nastavnik/update-nastavnik.co
 import { UpdatePredmetComponent } from './update-predmet/update-predmet.component';
 import { IzvodjacInfoComponent } from './izvodjac-info/izvodjac-info.component';
 import { UniquePipe } from './unique.pipe';
+import { IzvodjacMenComponent } from './izvodjac-men/izvodjac-men.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { UniquePipe } from './unique.pipe';
     UpdateNastavnikComponent,
     UpdatePredmetComponent,
     IzvodjacInfoComponent,
-    UniquePipe
+    UniquePipe,
+    IzvodjacMenComponent
 
     
     

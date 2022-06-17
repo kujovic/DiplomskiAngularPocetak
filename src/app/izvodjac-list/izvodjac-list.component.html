@@ -1,5 +1,5 @@
 <br>
-<h3>  </h3>
+<h3> </h3>
 
 <!-- <div class="btn-group" style="margin-bottom: 10px;">
     <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown"
@@ -46,13 +46,24 @@
           <td>{{izvodjac.predmet.nazivPredmeta}}</td>
           <td>{{izvodjac.uloga.vrstaUloge}}</td>
           <td>{{izvodjac.godina.kalendarskaGodina}}</td>  -->
-            <td *ngIf="izvodjac.semestar==1 || izvodjac.semestar==2"> {{izvodjac.pozicija}} </td>
-            <td *ngIf="izvodjac.semestar==1 || izvodjac.semestar==2">{{izvodjac.predmet.nazivPredmeta}}</td>
-            <td *ngIf="izvodjac.semestar==1 || izvodjac.semestar==2">{{izvodjac.predmet.katedra.skraceniNazivKatedre}}
+            <td
+                *ngIf="izvodjac.semestar==1 || izvodjac.semestar==2 && izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='ISIT'">
+                {{izvodjac.pozicija}} </td>
+            <td
+                *ngIf="izvodjac.semestar==1 || izvodjac.semestar==2 && izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='ISIT'">
+                {{izvodjac.predmet.nazivPredmeta}}</td>
+            <td
+                *ngIf="izvodjac.semestar==1 || izvodjac.semestar==2 && izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='ISIT'">
+                {{izvodjac.predmet.katedra.skraceniNazivKatedre}}
             </td>
-            <td *ngIf="izvodjac.semestar==1 || izvodjac.semestar==2">{{izvodjac.semestar}}</td>
-            <td *ngIf="izvodjac.semestar==1 || izvodjac.semestar==2"> {{izvodjac.predmet.espb}}</td>
-            <td *ngIf="izvodjac.semestar==1 || izvodjac.semestar==2">
+            <td
+                *ngIf="izvodjac.semestar==1 || izvodjac.semestar==2 && izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='ISIT'">
+                {{izvodjac.semestar}}</td>
+            <td
+                *ngIf="izvodjac.semestar==1 || izvodjac.semestar==2 && izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='ISIT'">
+                {{izvodjac.predmet.espb}}</td>
+            <td
+                *ngIf="izvodjac.semestar==1 || izvodjac.semestar==2 && izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='ISIT'">
                 <button type="button" (click)="izvodjacInfo(izvodjac.predmet.predmetId)"
                     class="btn btn-outline-info">Info
                 </button>
@@ -84,13 +95,24 @@
           <td>{{izvodjac.predmet.nazivPredmeta}}</td>
           <td>{{izvodjac.uloga.vrstaUloge}}</td>
           <td>{{izvodjac.godina.kalendarskaGodina}}</td>  -->
-            <td *ngIf="izvodjac.semestar==3 || izvodjac.semestar==4">{{izvodjac.pozicija}} </td>
-            <td *ngIf="izvodjac.semestar==3 || izvodjac.semestar==4">{{izvodjac.predmet.nazivPredmeta}}</td>
-            <td *ngIf="izvodjac.semestar==3 || izvodjac.semestar==4">{{izvodjac.predmet.katedra.skraceniNazivKatedre}}
+            <td
+                *ngIf="(izvodjac.semestar==3 || izvodjac.semestar==4)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='ISIT'">
+                {{izvodjac.pozicija}} </td>
+            <td
+                *ngIf="(izvodjac.semestar==3 || izvodjac.semestar==4) && izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='ISIT'">
+                {{izvodjac.predmet.nazivPredmeta}}</td>
+            <td
+                *ngIf="(izvodjac.semestar==3 || izvodjac.semestar==4) && izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='ISIT'">
+                {{izvodjac.predmet.katedra.skraceniNazivKatedre}}
             </td>
-            <td *ngIf="izvodjac.semestar==3 || izvodjac.semestar==4">{{izvodjac.semestar}}</td>
-            <td *ngIf="izvodjac.semestar==3 || izvodjac.semestar==4">{{izvodjac.predmet.espb}}</td>
-            <td *ngIf="izvodjac.semestar==3 || izvodjac.semestar==4">
+            <td
+                *ngIf="(izvodjac.semestar==3 || izvodjac.semestar==4) && izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='ISIT'">
+                {{izvodjac.semestar}}</td>
+            <td
+                *ngIf="(izvodjac.semestar==3 || izvodjac.semestar==4) && izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='ISIT'">
+                {{izvodjac.predmet.espb}}</td>
+            <td
+                *ngIf="(izvodjac.semestar==3 || izvodjac.semestar==4) && izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='ISIT'">
                 <button type="button" (click)="izvodjacInfo(izvodjac.predmet.predmetId)"
                     class="btn btn-outline-info">Info
                 </button>
@@ -122,13 +144,24 @@
           <td>{{izvodjac.predmet.nazivPredmeta}}</td>
           <td>{{izvodjac.uloga.vrstaUloge}}</td>
           <td>{{izvodjac.godina.kalendarskaGodina}}</td> -->
-            <td *ngIf="izvodjac.semestar==5 || izvodjac.semestar==6"> {{izvodjac.pozicija}} </td>
-            <td *ngIf="izvodjac.semestar==5 || izvodjac.semestar==6">{{izvodjac.predmet.nazivPredmeta}}</td>
-            <td *ngIf="izvodjac.semestar==5 || izvodjac.semestar==6">{{izvodjac.predmet.katedra.skraceniNazivKatedre}}
+            <td
+                *ngIf="(izvodjac.semestar==5 || izvodjac.semestar==6)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='ISIT'">
+                {{izvodjac.pozicija}} </td>
+            <td
+                *ngIf="(izvodjac.semestar==5 || izvodjac.semestar==6)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='ISIT'">
+                {{izvodjac.predmet.nazivPredmeta}}</td>
+            <td
+                *ngIf="(izvodjac.semestar==5 || izvodjac.semestar==6)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='ISIT'">
+                {{izvodjac.predmet.katedra.skraceniNazivKatedre}}
             </td>
-            <td *ngIf="izvodjac.semestar==5 || izvodjac.semestar==6">{{izvodjac.semestar}}</td>
-            <td *ngIf="izvodjac.semestar==5 || izvodjac.semestar==6">{{izvodjac.predmet.espb}}</td>
-            <td *ngIf="izvodjac.semestar==5 || izvodjac.semestar==6">
+            <td
+                *ngIf="(izvodjac.semestar==5 || izvodjac.semestar==6)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='ISIT'">
+                {{izvodjac.semestar}}</td>
+            <td
+                *ngIf="(izvodjac.semestar==5 || izvodjac.semestar==6)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='ISIT'">
+                {{izvodjac.predmet.espb}}</td>
+            <td
+                *ngIf="(izvodjac.semestar==5 || izvodjac.semestar==6)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='ISIT'">
                 <button type="button" (click)="izvodjacInfo(izvodjac.predmet.predmetId)"
                     class="btn btn-outline-info">Info
                 </button>
@@ -161,13 +194,13 @@
           <td>{{izvodjac.predmet.nazivPredmeta}}</td>
           <td>{{izvodjac.uloga.vrstaUloge}}</td>
           <td>{{izvodjac.godina.kalendarskaGodina}}</td> -->
-            <td *ngIf="izvodjac.semestar==7 || izvodjac.semestar==8">{{izvodjac.pozicija}} </td>
-            <td *ngIf="izvodjac.semestar==7 || izvodjac.semestar==8">{{izvodjac.predmet.nazivPredmeta}}</td>
-            <td *ngIf="izvodjac.semestar==7 || izvodjac.semestar==8">{{izvodjac.predmet.katedra.skraceniNazivKatedre}}
+            <td *ngIf="(izvodjac.semestar==7 || izvodjac.semestar==8)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='ISIT'">{{izvodjac.pozicija}} </td>
+            <td *ngIf="(izvodjac.semestar==7 || izvodjac.semestar==8)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='ISIT'">{{izvodjac.predmet.nazivPredmeta}}</td>
+            <td *ngIf="(izvodjac.semestar==7 || izvodjac.semestar==8)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='ISIT'">{{izvodjac.predmet.katedra.skraceniNazivKatedre}}
             </td>
-            <td *ngIf="izvodjac.semestar==7 || izvodjac.semestar==8">{{izvodjac.semestar}}</td>
-            <td *ngIf="izvodjac.semestar==7 || izvodjac.semestar==8">{{izvodjac.predmet.espb}}</td>
-            <td *ngIf="izvodjac.semestar==7 || izvodjac.semestar==8">
+            <td *ngIf="(izvodjac.semestar==7 || izvodjac.semestar==8)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='ISIT'">{{izvodjac.semestar}}</td>
+            <td *ngIf="(izvodjac.semestar==7 || izvodjac.semestar==8)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='ISIT'">{{izvodjac.predmet.espb}}</td>
+            <td *ngIf="(izvodjac.semestar==7 || izvodjac.semestar==8)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='ISIT'">
                 <button type="button" (click)="izvodjacInfo(izvodjac.predmet.predmetId)"
                     class="btn btn-outline-info">Info
                 </button>

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CreateKatedraComponent } from './create-katedra/create-katedra.component';
 import { IzvodjacInfoComponent } from './izvodjac-info/izvodjac-info.component';
 import { IzvodjacListComponent } from './izvodjac-list/izvodjac-list.component';
+import { IzvodjacMenComponent } from './izvodjac-men/izvodjac-men.component';
 import { KatedraListComponent } from './katedra-list/katedra-list.component';
 import { NastavnikListComponent } from './nastavnik-list/nastavnik-list.component';
 import { PredmetListComponent } from './predmet-list/predmet-list.component';
@@ -27,6 +28,9 @@ const routes: Routes = [
 
   {path: 'izvodjaci', component: IzvodjacListComponent},
   {path: 'izvodjaci/izvodjaci', redirectTo: 'izvodjaci',pathMatch:'full'},
+  {path: 'izvodjaci-men', component: IzvodjacMenComponent},
+
+
 
   {path: 'izvodjaci-info/:id', component: IzvodjacInfoComponent},
 

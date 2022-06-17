@@ -1,0 +1,175 @@
+<br>
+<h3> </h3>
+
+
+
+<br>
+
+<h2> Prva Godina </h2>
+<br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>R.br.</th>
+            <th>Naziv predmeta</th>
+            <th>Naziv katedre</th>
+            <th>Semestar</th>
+            <th>ESPB</th>
+            <th>Dodatno</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let izvodjac of izvodjaci  | searchfilter:searchValue | unique">
+
+            <td
+                *ngIf="izvodjac.semestar==1 || izvodjac.semestar==2 && izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='MEN'">
+                {{izvodjac.pozicija}} </td>
+            <td
+                *ngIf="izvodjac.semestar==1 || izvodjac.semestar==2 && izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='MEN'">
+                {{izvodjac.predmet.nazivPredmeta}}</td>
+            <td
+                *ngIf="izvodjac.semestar==1 || izvodjac.semestar==2 && izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='MEN'">
+                {{izvodjac.predmet.katedra.skraceniNazivKatedre}}
+            </td>
+            <td
+                *ngIf="izvodjac.semestar==1 || izvodjac.semestar==2 && izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='MEN'">
+                {{izvodjac.semestar}}</td>
+            <td
+                *ngIf="izvodjac.semestar==1 || izvodjac.semestar==2 && izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='MEN'">
+                {{izvodjac.predmet.espb}}</td>
+            <td
+                *ngIf="izvodjac.semestar==1 || izvodjac.semestar==2 && izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='MEN'">
+                <button type="button" (click)="izvodjacInfo(izvodjac.predmet.predmetId)"
+                    class="btn btn-outline-info">Info
+                </button>
+            </td>
+        </tr>
+
+    </tbody>
+
+</table>
+<br>
+
+<h2> Druga Godina </h2>
+<br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>R.br.</th>
+            <th>Naziv predmeta</th>
+            <th>Naziv katedre</th>
+            <th>Semestar</th>
+            <th>ESPB</th>
+            <th>Dodatno</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let izvodjac of izvodjaci | searchfilter:searchValue | unique">
+
+            <td
+                *ngIf="(izvodjac.semestar==3 || izvodjac.semestar==4)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='MEN'">
+                {{izvodjac.pozicija}} </td>
+            <td
+                *ngIf="(izvodjac.semestar==3 || izvodjac.semestar==4) && izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='MEN'">
+                {{izvodjac.predmet.nazivPredmeta}}</td>
+            <td
+                *ngIf="(izvodjac.semestar==3 || izvodjac.semestar==4) && izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='MEN'">
+                {{izvodjac.predmet.katedra.skraceniNazivKatedre}}
+            </td>
+            <td
+                *ngIf="(izvodjac.semestar==3 || izvodjac.semestar==4) && izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='MEN'">
+                {{izvodjac.semestar}}</td>
+            <td
+                *ngIf="(izvodjac.semestar==3 || izvodjac.semestar==4) && izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='MEN'">
+                {{izvodjac.predmet.espb}}</td>
+            <td
+                *ngIf="(izvodjac.semestar==3 || izvodjac.semestar==4) && izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='MEN'">
+                <button type="button" (click)="izvodjacInfo(izvodjac.predmet.predmetId)"
+                    class="btn btn-outline-info">Info
+                </button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+
+<br>
+
+<h2> Treća Godina </h2>
+<br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>R.br.</th>
+            <th>Naziv predmeta</th>
+            <th>Naziv katedre</th>
+            <th>Semestar</th>
+            <th>ESPB</th>
+            <th>Dodatno</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let izvodjac of izvodjaci | searchfilter:searchValue | unique">
+
+            <td
+                *ngIf="(izvodjac.semestar==5 || izvodjac.semestar==6)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='MEN'">
+                {{izvodjac.pozicija}} </td>
+            <td
+                *ngIf="(izvodjac.semestar==5 || izvodjac.semestar==6)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='MEN'">
+                {{izvodjac.predmet.nazivPredmeta}}</td>
+            <td
+                *ngIf="(izvodjac.semestar==5 || izvodjac.semestar==6)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='MEN'">
+                {{izvodjac.predmet.katedra.skraceniNazivKatedre}}
+            </td>
+            <td
+                *ngIf="(izvodjac.semestar==5 || izvodjac.semestar==6)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='MEN'">
+                {{izvodjac.semestar}}</td>
+            <td
+                *ngIf="(izvodjac.semestar==5 || izvodjac.semestar==6)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='MEN'">
+                {{izvodjac.predmet.espb}}</td>
+            <td
+                *ngIf="(izvodjac.semestar==5 || izvodjac.semestar==6)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='MEN'">
+                <button type="button" (click)="izvodjacInfo(izvodjac.predmet.predmetId)"
+                    class="btn btn-outline-info">Info
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+
+<h2> Četvrta Godina </h2>
+<br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>R.br.</th>
+            <th>Naziv predmeta</th>
+            <th>Naziv katedre</th>
+            <th>Semestar</th>
+            <th>ESPB</th>
+            <th>Dodatno</th>
+            <!--           <th>Vrsta uloge</th>
+            <th>Školska godina</th> -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let izvodjac of izvodjaci | searchfilter:searchValue | unique ">
+            <td *ngIf="(izvodjac.semestar==7 || izvodjac.semestar==8)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='MEN'">{{izvodjac.pozicija}} </td>
+            <td *ngIf="(izvodjac.semestar==7 || izvodjac.semestar==8)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='MEN'">{{izvodjac.predmet.nazivPredmeta}}</td>
+            <td *ngIf="(izvodjac.semestar==7 || izvodjac.semestar==8)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='MEN'">{{izvodjac.predmet.katedra.skraceniNazivKatedre}}
+            </td>
+            <td *ngIf="(izvodjac.semestar==7 || izvodjac.semestar==8)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='MEN'">{{izvodjac.semestar}}</td>
+            <td *ngIf="(izvodjac.semestar==7 || izvodjac.semestar==8)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='MEN'">{{izvodjac.predmet.espb}}</td>
+            <td *ngIf="(izvodjac.semestar==7 || izvodjac.semestar==8)&& izvodjac.studijskiProgram.skraceniNazivStudijskogPrograma=='MEN'">
+                <button type="button" (click)="izvodjacInfo(izvodjac.predmet.predmetId)"
+                    class="btn btn-outline-info">Info
+                </button>
+            </td>
+
+
+        </tr>
+    </tbody>
+</table>
