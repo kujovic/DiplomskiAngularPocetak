@@ -2,9 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Izvodjac } from '../izvodjac';
 import { IzvodjacService } from '../izvodjac.service';
+import { UniquePipe } from '../unique.pipe';
 
 @Component({
   selector: 'app-izvodjac-list',
+
   templateUrl: './izvodjac-list.component.html',
   styleUrls: ['./izvodjac-list.component.css']
 })
@@ -31,3 +33,4 @@ export class IzvodjacListComponent implements OnInit {
   }
 
 }
+

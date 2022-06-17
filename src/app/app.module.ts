@@ -14,7 +14,7 @@ import { SearchfilterPipe } from './searchfilter.pipe';
 import { UpdateNastavnikComponent } from './update-nastavnik/update-nastavnik.component';
 import { UpdatePredmetComponent } from './update-predmet/update-predmet.component';
 import { IzvodjacInfoComponent } from './izvodjac-info/izvodjac-info.component';
-
+import { UniquePipe } from './unique.pipe';
 
 
 @NgModule({
@@ -29,7 +29,10 @@ import { IzvodjacInfoComponent } from './izvodjac-info/izvodjac-info.component';
     SearchfilterPipe,
     UpdateNastavnikComponent,
     UpdatePredmetComponent,
-    IzvodjacInfoComponent
+    IzvodjacInfoComponent,
+    UniquePipe
+
+    
     
   ],
   imports: [

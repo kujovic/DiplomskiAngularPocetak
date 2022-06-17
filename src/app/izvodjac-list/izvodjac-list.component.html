@@ -39,7 +39,7 @@
     </thead>
     <tbody>
 
-        <tr *ngFor="let izvodjac of izvodjaci  | searchfilter:searchValue">
+        <tr *ngFor="let izvodjac of izvodjaci  | searchfilter:searchValue | unique">
 
             <!--  <td> {{ katedra.katedraId}} </td>
           <td>{{izvodjac.nastavnik.imePrezime}}</td>
@@ -78,7 +78,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let izvodjac of izvodjaci | searchfilter:searchValue">
+        <tr *ngFor="let izvodjac of izvodjaci | searchfilter:searchValue | unique">
             <!--  <td> {{ katedra.katedraId}} </td>
           <td>{{izvodjac.nastavnik.imePrezime}}</td>
           <td>{{izvodjac.predmet.nazivPredmeta}}</td>
@@ -116,7 +116,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let izvodjac of izvodjaci | searchfilter:searchValue">
+        <tr *ngFor="let izvodjac of izvodjaci | searchfilter:searchValue | unique">
             <!--  <td> {{ katedra.katedraId}} </td>
           <td>{{izvodjac.nastavnik.imePrezime}}</td>
           <td>{{izvodjac.predmet.nazivPredmeta}}</td>
@@ -155,7 +155,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let izvodjac of izvodjaci | searchfilter:searchValue">
+        <tr *ngFor="let izvodjac of izvodjaci | searchfilter:searchValue | unique ">
             <!--  <td> {{ katedra.katedraId}} </td>-->
             <!--      <td>{{izvodjac.nastavnik.imePrezime}}</td>
           <td>{{izvodjac.predmet.nazivPredmeta}}</td>
