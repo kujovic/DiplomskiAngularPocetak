@@ -5,27 +5,27 @@
         <tr>
             <!-- <th> Id predmeta </th> -->
             <th> Naziv predmeta </th>
-            <th> Semestar </th>
+       <!--     <th> Semestar </th>-->
             <th> Obavezan </th>
             <th> Katedra </th>
-            <th> Akcije</th>
+         <!--    <th> Akcije</th> -->
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let predmet of predmeti">
            <!--  <td> {{predmet.predmetId}} </td> -->
             <td>   {{ predmet.nazivPredmeta}} </td>
-            <td>   {{ predmet.semestar}} </td>
+        <!--    <td>   {{ predmet.semestar}} </td> -->
             <td>   {{ predmet.obavezan}} </td>
             <td> {{predmet.katedra.nazivKatedre}}</td>
-            <td>      
+           <!--    <td>      
                 <button type="button"
                     (click)="updatePredmet(predmet.predmetId)" class="btn btn-outline-primary">Ažuriraj
                 </button>
-                <button type="button"
+              <button type="button"
                     (click)="deletePredmet(predmet.predmetId)" class="btn btn-outline-danger" style="margin-left: 10px;">Obriši
-                </button>
-            </td>
+                </button> 
+            </td> -->
         </tr>
     </tbody>
 </table>
