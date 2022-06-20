@@ -10,6 +10,7 @@ import { NastavnikService } from '../nastavnik.service';
 export class NastavnikListComponent implements OnInit {
 
   nastavnici!: Nastavnik[];
+  searchValue! :string;
   constructor(private nastavnikService: NastavnikService,
     private router: Router) { }
 

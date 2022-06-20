@@ -2,9 +2,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { Izvodjac } from './izvodjac';
 
 @Pipe({
-  name: 'searchfilter'
+  name: 'searchizvodjmen'
 })
-export class SearchfilterPipe implements PipeTransform {
+export class SearchizvodjmenPipe implements PipeTransform {
 
   transform(izvodjaci: Izvodjac[], searchValue: string): Izvodjac[] {
     if(!izvodjaci || !searchValue){
@@ -17,7 +17,5 @@ export class SearchfilterPipe implements PipeTransform {
     
       );
   }
-
-  
 
 }

@@ -12,6 +12,7 @@ import { KatedraService } from '../katedra.service';
 export class KatedraListComponent implements OnInit {
 
   katedre!: Katedra[];
+  searchValue!: string;
 
   constructor(private katedraService: KatedraService,
     private router:Router) { }

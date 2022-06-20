@@ -1,5 +1,13 @@
 <h3> Lista predmeta </h3>
 <br>
+<div class="form-group row">
+    <label for="search" class="col-sm-1 col-form-label" style="text-align: left;">Pretraži</label>
+    <div class="col-sm-2">
+        <input type="text" [(ngModel)]="searchValue" class="form-control" id="search" />
+    </div>
+
+</div>
+<br>
 <table class="table table-striped">
     <thead>
         <tr>
@@ -12,7 +20,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let predmet of predmeti">
+        <tr *ngFor="let predmet of predmeti | searchpredmet:searchValue">
            <!--  <td> {{predmet.predmetId}} </td> -->
             <td>   {{ predmet.nazivPredmeta}} </td>
         <!--    <td>   {{ predmet.semestar}} </td> -->

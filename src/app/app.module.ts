@@ -16,6 +16,10 @@ import { UpdatePredmetComponent } from './update-predmet/update-predmet.componen
 import { IzvodjacInfoComponent } from './izvodjac-info/izvodjac-info.component';
 import { UniquePipe } from './unique.pipe';
 import { IzvodjacMenComponent } from './izvodjac-men/izvodjac-men.component';
+import { SearchkatedraPipe } from './searchkatedra.pipe';
+import { SearchnastavnikPipe } from './searchnastavnik.pipe';
+import { SearchpredmetPipe } from './searchpredmet.pipe';
+import { SearchizvodjmenPipe } from './searchizvodjmen.pipe';
 
 
 @NgModule({
@@ -32,7 +36,11 @@ import { IzvodjacMenComponent } from './izvodjac-men/izvodjac-men.component';
     UpdatePredmetComponent,
     IzvodjacInfoComponent,
     UniquePipe,
-    IzvodjacMenComponent
+    IzvodjacMenComponent,
+    SearchkatedraPipe,
+    SearchnastavnikPipe,
+    SearchpredmetPipe,
+    SearchizvodjmenPipe
 
     
     

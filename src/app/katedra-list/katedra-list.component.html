@@ -1,6 +1,14 @@
 <h3> Lista katedri </h3>
 <br>
-<table class="table table-striped">
+<div class="form-group row">
+    <label for="search" class="col-sm-1 col-form-label" style="text-align: left;">Pretraži</label>
+    <div class="col-sm-2">
+        <input type="text" [(ngModel)]="searchValue" class="form-control" id="search" />
+    </div>
+
+</div>
+<br>
+<table class="table table-striped"> 
     <thead>
         <tr>
            <!-- <th>Id katedre </th> -->
@@ -10,7 +18,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let katedra of katedre">
+        <tr *ngFor="let katedra of katedre | searchkatedra:searchValue " >
           <!--  <td> {{ katedra.katedraId}} </td>-->
             <td>   {{ katedra.nazivKatedre}} </td>
             <td>   {{ katedra.skraceniNazivKatedre}} </td>

@@ -11,6 +11,7 @@ import { PredmetService } from '../predmet.service';
 export class PredmetListComponent implements OnInit {
 
   predmeti!: Predmet[];
+  searchValue! :string;
   constructor(private predmetService: PredmetService,
     private router: Router) { }
 
