@@ -4,6 +4,7 @@ import { CreateKatedraComponent } from './create-katedra/create-katedra.componen
 import { IzvodjacInfoComponent } from './izvodjac-info/izvodjac-info.component';
 import { IzvodjacListComponent } from './izvodjac-list/izvodjac-list.component';
 import { IzvodjacMenComponent } from './izvodjac-men/izvodjac-men.component';
+import { KatedraInfoComponent } from './katedra-info/katedra-info.component';
 import { KatedraListComponent } from './katedra-list/katedra-list.component';
 import { NastavnikListComponent } from './nastavnik-list/nastavnik-list.component';
 import { PredmetListComponent } from './predmet-list/predmet-list.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'katedre', component: KatedraListComponent},
   {path: 'create-katedra', component : CreateKatedraComponent},
   {path: 'update-katedra/:id', component : UpdateKatedraComponent},
+  {path: 'info-katedra/:id', component : KatedraInfoComponent},
 
 
   {path: 'nastavnici', component: NastavnikListComponent},

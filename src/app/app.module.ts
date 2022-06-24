@@ -20,6 +20,7 @@ import { SearchkatedraPipe } from './searchkatedra.pipe';
 import { SearchnastavnikPipe } from './searchnastavnik.pipe';
 import { SearchpredmetPipe } from './searchpredmet.pipe';
 import { SearchizvodjmenPipe } from './searchizvodjmen.pipe';
+import { KatedraInfoComponent } from './katedra-info/katedra-info.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { SearchizvodjmenPipe } from './searchizvodjmen.pipe';
     SearchkatedraPipe,
     SearchnastavnikPipe,
     SearchpredmetPipe,
-    SearchizvodjmenPipe
+    SearchizvodjmenPipe,
+    KatedraInfoComponent
 
     
     

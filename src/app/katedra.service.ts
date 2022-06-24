@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Katedra } from './katedra';
+import { Nastavnik } from './nastavnik';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,7 @@ export class KatedraService {
   private getUrl = "http://localhost:8080/katedra/get";
   private updateUrl = "http://localhost:8080/katedra/update";
   private deleteUrl = "http://localhost:8080/katedra/delete";
+  private getNastavnik = "http://localhost:8080/katedra/getnastavnik";
 
 
   constructor(private httpClient: HttpClient) { }
@@ -34,5 +36,9 @@ export class KatedraService {
 
   deleteKatedra(id: number): Observable<Object> {
     return this.httpClient.delete(`${this.deleteUrl}/${id}`);
+  }
+
+  getNastavnikByKatedra(id: number) : Observable<Nastavnik[]> {
+    return this.httpClient.get<Nastavnik[]>(`${this.getNastavnik}/${id}`);
   }
 }

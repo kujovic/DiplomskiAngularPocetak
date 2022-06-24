@@ -40,4 +40,10 @@ deleteKatedra(id: number){
 
 }
 
+infoKatedra(katedraId: number){
+
+  this.router.navigate(['info-katedra',katedraId]);
+
+}
+
 }
