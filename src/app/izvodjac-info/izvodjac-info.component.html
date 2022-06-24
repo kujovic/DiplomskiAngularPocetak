@@ -1,7 +1,31 @@
 <br>
+<br>
+<h2> Detalji o izvođenju </h2>
 
 
-<h3> Detalji izvođenja  </h3>
+<br>
+<h3> Detalji o predmetu </h3>
+<br>
+<div>
+    <div>
+        <label> <b> Naziv predmeta: </b></label> {{izvodjaci[0].predmet.nazivPredmeta}}
+    </div>
+    <div>
+        <label> <b> Semestar: </b></label> {{izvodjaci[0].semestar}}
+    <div>
+            <label> <b> ESPB: </b></label> {{izvodjaci[0].predmet.espb}}
+    </div>
+    <div>
+        <label> <b> Naziv katedre: </b></label> {{izvodjaci[0].nastavnik.katedra.nazivKatedre}}
+    </div>
+    <div>
+        <label> <b> Skraćeni naziv katedre: </b></label> {{izvodjaci[0].nastavnik.katedra.skraceniNazivKatedre}}
+    </div>
+</div>
+
+<br>
+<br>
+<h2> Nastavnici zaduženi za realizaciju nastave  </h2>
 
 <br>
 
@@ -10,9 +34,11 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Naziv predmeta</th>
                 <th>Ime i prezime nastavnika</th>
+                <th>Status nastavnika</th>
+                <th>Broj telefona nastavnika</th>
                 <th>Uloga</th>
+                <th></th>
 
             </tr>
         </thead>
@@ -24,14 +50,16 @@
               <td>{{izvodjac.nastavnik.imePrezime}}</td>
               <td>{{izvodjac.predmet.nazivPredmeta}}</td>
               <td>{{izvodjac.uloga.vrstaUloge}}</td>
-              <td>{{izvodjac.godina.kalendarskaGodina}}</td>  -->
-                <td> {{izvodjac.predmet.nazivPredmeta}}</td>
+              <td>{{izvodjac.godina.kalendarskaGodina}}</td>  
+                <td> {{izvodjac.predmet.nazivPredmeta}}</td>-->
                 <td>{{izvodjac.nastavnik.imePrezime}}</td>
+                <td>{{izvodjac.nastavnik.status}}</td>
+                <td>{{izvodjac.nastavnik.brojTelefona}}</td>
                 <td>{{izvodjac.uloga.vrstaUloge}}</td>
-           <!--   <td><button type="button" 
+             <td><button type="button" 
                     class="btn btn-outline-danger">Izmeni
                 </button>     
-            </td> -->  
+            </td> 
             </tr>
     
         </tbody>
