@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CreateIzvodjacComponent } from './create-izvodjac/create-izvodjac.component';
 import { CreateKatedraComponent } from './create-katedra/create-katedra.component';
 import { IzvodjacInfoComponent } from './izvodjac-info/izvodjac-info.component';
 import { IzvodjacListComponent } from './izvodjac-list/izvodjac-list.component';
@@ -31,7 +32,7 @@ const routes: Routes = [
   {path: 'izvodjaci', component: IzvodjacListComponent},
   {path: 'izvodjaci/izvodjaci', redirectTo: 'izvodjaci',pathMatch:'full'},
   {path: 'izvodjaci-men', component: IzvodjacMenComponent},
-
+  {path: 'create-izvodjac/:id', component: CreateIzvodjacComponent},
 
 
   {path: 'izvodjaci-info/:id', component: IzvodjacInfoComponent},

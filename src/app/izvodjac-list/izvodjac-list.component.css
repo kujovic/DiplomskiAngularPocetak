@@ -1,3 +1,7 @@
 h2 {
     text-align:center;
 }
+
+.btn-float-right{
+	float: right;
+}

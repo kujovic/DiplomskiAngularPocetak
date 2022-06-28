@@ -6,6 +6,7 @@ import { Uloga } from "./uloga";
 
 export class Izvodjac {
 
+    izvodjacId!: number;
     nastavnik!: Nastavnik;
     predmet!: Predmet;
     uloga!: Uloga;

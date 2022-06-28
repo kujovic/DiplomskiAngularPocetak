@@ -1,0 +1,142 @@
+<div class="col-md-6 offset-md-3">
+    <br>
+    <br>
+
+    <h2> Kreiraj izvođača</h2>
+    <br>
+    <!--  <form (ngSubmit)="onSubmit()">
+    -->
+
+
+    <form  #form="ngForm" (ngSubmit)="saveIzvodjac()">
+        <div>
+            <label for="imeNastavnika">Izaberi nastavnika:</label>
+            <br>
+            <select name="imeNastavnika" id="imeNastavnika"  [(ngModel)]="selectedNastavnik">
+                <option *ngFor="let nastavnik of nastavnici" [ngValue]="nastavnik.imePrezime">
+                    {{nastavnik.imePrezime}}
+                </option>
+            </select>
+            <br>
+
+            <br>
+            <label for="vrstaUloge">Izaberi ulogu:</label>
+            <br>
+            <select name="vrstaUloge" id="vrstaUloge" [(ngModel)]="selectedUloga">
+                <option *ngFor="let uloga of uloge" [ngValue]="uloga.vrstaUloge">
+                    {{uloga.vrstaUloge}}
+                </option>
+            </select>
+            <br>
+            <br>
+            <button type="submit" class="btn btn-primary manage">Sačuvaj</button>
+        </div>
+
+        <br>
+
+    </form>
+
+
+    <br>
+    <br>
+    <h3> Detalji o izvođenju </h3>
+    <br>
+
+    <div class="form-group">
+        <label>Naziv predmeta</label>
+        <input type="text" class="form-control" id="nazivPredmeta" [ngModel]="izvodjaci[0]?.predmet?.nazivPredmeta"
+            name="nazivPredmeta" readonly>
+    </div>
+
+    <div class="form-group">
+        <label>Semestar</label>
+        <input type="text" class="form-control" id="semestar" [ngModel]="izvodjaci[0]?.semestar" name="semestar"
+            readonly>
+    </div>
+
+    <div class="form-group">
+        <label>ESPB</label>
+        <input type="text" class="form-control" id="espb" [ngModel]="izvodjaci[0]?.predmet?.espb" name="espb" readonly>
+    </div>
+
+    <div class="form-group">
+        <label>Naziv katedre</label>
+        <input type="text" class="form-control" id="nazivKatedre"
+            [ngModel]="izvodjaci[0]?.nastavnik?.katedra?.nazivKatedre" name="nazivKatedre" readonly>
+    </div>
+
+    <div class="form-group">
+        <label>Skraćeni naziv katedre</label>
+        <input type="text" class="form-control" id="skraceniNazivKatedre"
+            [ngModel]="izvodjaci[0]?.nastavnik?.katedra?.skraceniNazivKatedre" name="skraceniNazivKatedre" readonly>
+    </div>
+
+    <div class="form-group">
+        <label>Studijski program</label>
+        <input type="text" class="form-control" id="nazivStudijskogPrograma"
+            [ngModel]="izvodjaci[0]?.studijskiProgram?.nazivStudijskogPrograma" name="nazivStudijskogPrograma" readonly>
+    </div>
+
+
+    <!-- <div>
+        <label> <b> Naziv predmeta: </b></label> {{izvodjaci[0].predmet.nazivPredmeta}}
+    </div>
+    <div>
+        <label> <b> Semestar: </b></label> {{izvodjaci[0].semestar}}
+        <div>
+            <label> <b> ESPB: </b></label> {{izvodjaci[0].predmet.espb}}
+        </div>
+        <div>
+            <label> <b> Naziv katedre: </b></label> {{izvodjaci[0].nastavnik.katedra.nazivKatedre}}
+        </div>
+        <div>
+            <label> <b> Skraćeni naziv katedre: </b></label> {{izvodjaci[0].nastavnik.katedra.skraceniNazivKatedre}}
+        </div>
+-->
+
+
+
+    <!--  <br>
+    <form>
+        <div>
+            <label for="semestar">Izaberi semestar:</label>
+            <br>
+            <select name="semestar" id="semestar">
+                <option *ngFor="let semestar of semestri" [value]="semestar">
+                    {{semestar}}
+                </option>
+            </select>
+        </div>
+    </form>
+
+    <br>
+    <form>
+        <div>
+            <label for="pozicija">Izaberi poziciju:</label>
+            <br>
+            <select name="pozicija" id="pozicija">
+                <option *ngFor="let pozicija of pozicije" [value]="pozicija">
+                    {{pozicija}}
+                </option>
+            </select>
+        </div>
+    </form> -->
+    <!--
+        <div class="form-group">
+            <label>Id katedre</label>
+            <input type="text" class="form-control" id="katedraId" [(ngModel)]="katedra.katedraId" name="katedraId">
+        </div>
+
+        <div class="form-group">
+            <label>Naziv katedre</label>
+            <input type="text" class="form-control" id="nazivKatedre" [(ngModel)]="katedra.nazivKatedre"
+                name="nazivKatedre">
+        </div>
+
+        <div class="form-group">
+            <label>Skraćeni naziv katedre</label>
+            <input type="text" class="form-control" id="skraceniNazivKatedre" [(ngModel)]="katedra.skraceniNazivKatedre"
+                name="skraceniNazivKatedre">
+        </div>
+
+        <button class="btn btn-success" type="submit">Sačuvaj</button> -->

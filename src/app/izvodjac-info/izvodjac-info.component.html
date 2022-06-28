@@ -8,25 +8,29 @@
 <br>
 <div>
     <div>
-        <label> <b> Naziv predmeta: </b></label> {{izvodjaci[0].predmet.nazivPredmeta}}
+        <label> <b> Naziv predmeta: </b></label> {{izvodjaci[0]?.predmet?.nazivPredmeta}}
     </div>
     <div>
-        <label> <b> Semestar: </b></label> {{izvodjaci[0].semestar}}
+        <label> <b> Semestar: </b></label> {{izvodjaci[0]?.semestar}}
     <div>
-            <label> <b> ESPB: </b></label> {{izvodjaci[0].predmet.espb}}
+            <label> <b> ESPB: </b></label> {{izvodjaci[0]?.predmet?.espb}}
     </div>
     <div>
-        <label> <b> Naziv katedre: </b></label> {{izvodjaci[0].nastavnik.katedra.nazivKatedre}}
+        <label> <b> Naziv katedre: </b></label> {{izvodjaci[0]?.nastavnik?.katedra?.nazivKatedre}}
     </div>
     <div>
-        <label> <b> Skraćeni naziv katedre: </b></label> {{izvodjaci[0].nastavnik.katedra.skraceniNazivKatedre}}
+        <label> <b> Skraćeni naziv katedre: </b></label> {{izvodjaci[0]?.nastavnik?.katedra?.skraceniNazivKatedre}}
     </div>
 </div>
 
 <br>
 <br>
-<h2> Nastavnici zaduženi za realizaciju nastave  </h2>
+<h2> Izvodjači zaduženi za realizaciju nastave  </h2>
 
+<div>
+    <br>
+    <button type="button" (click)="createIzvodjac(izvodjaci[0].predmet.predmetId)" class="btn btn-outline-dark">Dodaj izvođača</button>
+</div>
 <br>
 
 
@@ -56,8 +60,8 @@
                 <td>{{izvodjac.nastavnik.status}}</td>
                 <td>{{izvodjac.nastavnik.brojTelefona}}</td>
                 <td>{{izvodjac.uloga.vrstaUloge}}</td>
-             <td><button type="button" 
-                    class="btn btn-outline-danger">Izmeni
+             <td><button (click) = "deleteIzvodjac(izvodjac.izvodjacId)"
+                    class="btn btn-outline-danger">Obriši
                 </button>     
             </td> 
             </tr>
