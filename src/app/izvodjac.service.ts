@@ -20,6 +20,7 @@ export class IzvodjacService {
   private getNastavnikUrl = "http://localhost:8080/nastavnik/all";
   private getPredmetAllUrl = "http://localhost:8080/predmet/all";
   private getUlogeAllUrl = "http://localhost:8080/uloga/all";
+  private getMaxIzvodjacId = "http://localhost:8080/izvodjac/getmax";
 
   constructor(private httpClient: HttpClient) { }
 
@@ -54,5 +55,9 @@ export class IzvodjacService {
 
   getAllIzvodjaci(): Observable<Izvodjac[]> {
     return this.httpClient.get<Izvodjac[]>(this.getAllUrl);
+  }
+
+  getMaxId(): Observable<number> {
+    return this.httpClient.get<number>(this.getMaxIzvodjacId);
   }
 }

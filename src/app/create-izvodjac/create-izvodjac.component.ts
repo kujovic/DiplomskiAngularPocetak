@@ -27,7 +27,7 @@ export class CreateIzvodjacComponent implements OnInit {
 
   sviIzvodjaci!: Izvodjac[] ;
 
-  izvodjacId! : number;
+  izvodjacId : number=0;
   nastavnik!: Nastavnik;
   predmet!: Predmet;
   uloga!: Uloga;
@@ -37,7 +37,6 @@ export class CreateIzvodjacComponent implements OnInit {
   semestar!: number;
 
   izvodjac: Izvodjac = new Izvodjac();
-
 
 
   constructor(private route: ActivatedRoute,
@@ -72,9 +71,12 @@ export class CreateIzvodjacComponent implements OnInit {
     });
   }
 
-  private  sledeciId(){
-   // return  ++this.sviIzvodjaci.length;
-  return 11;
+  private sledeciId(){
+    this.izvodjacService.getMaxId().subscribe(data => {
+      this.izvodjacId = data;
+    });
+    return this.izvodjacId;
+
   }
 
 
@@ -125,9 +127,11 @@ export class CreateIzvodjacComponent implements OnInit {
       }
     }
 
-    console.log(this.izvodjacId);
-    this.izvodjac.izvodjacId = 0;
-    this.izvodjac.izvodjacId = this.izvodjacId;
+    
+    //this.izvodjac.izvodjacId = this.sledeciId();
+    //console.log(this.izvodjac.izvodjacId);
+   // this.izvodjac.izvodjacId = ++ this.izvodjacId;
+    //console.log(this.izvodjac.izvodjacId);
     this.izvodjac.nastavnik=this.nastavnik;
     this.izvodjac.uloga=this.uloga;
 
@@ -136,6 +140,7 @@ export class CreateIzvodjacComponent implements OnInit {
     this.izvodjac.semestar = this.semestar;
     this.izvodjac.pozicija=this.pozicija;
     this.izvodjac.godina=this.godina;
+
 
 
     this.izvodjacService.createIzvodjac(this.izvodjac).subscribe(data=>{
@@ -147,7 +152,7 @@ export class CreateIzvodjacComponent implements OnInit {
   }
 
   napuniObjekatIzvodjaca() {
-    this.izvodjacId = this.sledeciId();
+    //this.izvodjacId = this.sledeciId();
     this.predmet = this.izvodjaci[0].predmet;
     this.studijskiProgram = this.izvodjaci[0].studijskiProgram;
     this.semestar = this.izvodjaci[0].semestar;
