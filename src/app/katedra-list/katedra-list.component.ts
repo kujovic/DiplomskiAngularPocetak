@@ -45,5 +45,8 @@ infoKatedra(katedraId: number){
   this.router.navigate(['info-katedra',katedraId]);
 
 }
+createKatedra(){
+  this.router.navigate(['create-katedra']);
+}
 
 }

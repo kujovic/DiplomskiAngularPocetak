@@ -10,6 +10,7 @@ import { KatedraService } from '../katedra.service';
 })
 export class CreateKatedraComponent implements OnInit {
   id!: number;
+  katedraId : number=0;
   katedra: Katedra= new Katedra();
 
   constructor(private katedraService:KatedraService,
@@ -21,6 +22,7 @@ export class CreateKatedraComponent implements OnInit {
   }
 
   saveKatedra(){
+    this.katedra.katedraId=this.katedraId;
     this.katedraService.createKatedra(this.katedra).subscribe(data=>{
       console.log(data);
       this.izlistajKatedre();

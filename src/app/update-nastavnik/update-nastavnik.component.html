@@ -35,7 +35,17 @@
             <input type="text" class="form-control" id = "katedra.nazivKatedre"
                 [(ngModel)] = "nastavnik.katedra.nazivKatedre" name="katedra.nazivKatedre" readonly>
         </div>
-    
+        <div>
+            <label for="katedra">Izaberi katedru:</label>
+                <br>
+                <select name="katedra" id="katedra"  [(ngModel)]="selectedKatedra">
+                    <option *ngFor="let katedra of katedre" [ngValue]="katedra.nazivKatedre">
+                        {{katedra.nazivKatedre}}
+                    </option>
+                </select>
+                <br>
+            </div>
+            <br>
         <button class = "btn btn-success" type="submit">Sačuvaj</button>
     </form>
     </div>

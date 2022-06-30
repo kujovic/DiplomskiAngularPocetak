@@ -1,0 +1,43 @@
+<div class="col-md-6 offset-md-3">
+    <br>
+    <h3> Kreiraj nastavnika</h3>
+    <br>
+    <form (ngSubmit)="onSubmit()">
+
+<!--
+        <div class="form-group">
+            <label>Id katedre</label>
+            <input type="text" class="form-control" id="katedraId" [(ngModel)]="katedra.katedraId" name="katedraId">
+        </div>
+-->
+        <div class="form-group">
+            <label>Ime i prezime nastavnika</label>
+            <input type="text" class="form-control" id="imePrezime" [(ngModel)]="nastavnik.imePrezime"
+                name="imePrezime">
+        </div>
+
+        <div class="form-group">
+            <label>Broj telefona nastavnika</label>
+            <input type="text" class="form-control" id="brojTelefona" [(ngModel)]="nastavnik.brojTelefona"
+                name="brojTelefona">
+        </div>
+
+        <div class="form-group">
+            <label>Status</label>
+            <input type="text" class="form-control" id="status" [(ngModel)]="nastavnik.status"
+                name="status">
+        </div>
+
+
+        <label for="katedra">Izaberi katedru:</label>
+            <br>
+            <select name="katedra" id="katedra"  [(ngModel)]="selectedKatedra">
+                <option *ngFor="let katedra of katedre" [ngValue]="katedra.nazivKatedre">
+                    {{katedra.nazivKatedre}}
+                </option>
+            </select>
+            <br>
+            <br>
+        <button class="btn btn-success" type="submit">Sačuvaj</button>
+    </form>
+</div>

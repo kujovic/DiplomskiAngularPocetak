@@ -5,7 +5,11 @@
     <div class="col-sm-2">
         <input type="text" [(ngModel)]="searchValue" class="form-control" id="search" />
     </div>
-
+</div>
+    <div>
+    <button type="button"
+    (click)="createKatedra()" class="btn btn-outline-dark" > Dodaj katedru
+</button> 
 </div>
 <br>
 <table class="table table-striped"> 
@@ -14,7 +18,7 @@
            <!-- <th>Id katedre </th> -->
             <th>Naziv katedre </th>
             <th>Skraćeni naziv katedre</th>
-            <th>Akcije</th>
+            <th> </th>
         </tr>
     </thead>
     <tbody>
@@ -22,14 +26,18 @@
           <!--  <td> {{ katedra.katedraId}} </td>-->
             <td>   {{ katedra.nazivKatedre}} </td>
             <td>   {{ katedra.skraceniNazivKatedre}} </td>
-            <td>      
+            <td>     
+                
                 <button type="button"
                     (click)="updateKatedra(katedra.katedraId)" class="btn btn-outline-danger" style="margin-left: 10px">Ažuriraj
                 </button>
                 <button type="button"
                     (click)="infoKatedra(katedra.katedraId)" class="btn btn-outline-primary" style="margin-left: 10px">Info
                 </button>
-            <!--   <button type="button"
+             <!--   <button (click) = "deleteKatedra(katedra.katedraId)"
+                    class="btn btn-outline-danger" style="margin-left: 10px">Obriši
+                </button>  
+          <button type="button"
                     (click)="deleteKatedra(katedra.katedraId)" class="btn btn-outline-danger" style="margin-left: 10px;">Obriši
                 </button> --> 
             </td>

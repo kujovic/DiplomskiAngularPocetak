@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Katedra } from '../katedra';
 import { Nastavnik } from '../nastavnik';
 import { NastavnikService } from '../nastavnik.service';
 
@@ -12,6 +13,9 @@ export class UpdateNastavnikComponent implements OnInit {
 
   id!: number;
   nastavnik : Nastavnik = new Nastavnik();
+  katedre!: Katedra[];
+  katedra!: Katedra;
+  selectedKatedra!: string;
 
   constructor(private nastavnikService: NastavnikService,
     private route:ActivatedRoute,
@@ -22,6 +26,9 @@ export class UpdateNastavnikComponent implements OnInit {
     this.nastavnikService.getNastavnikById(this.id).subscribe(data =>{
       this.nastavnik=data;}
       , error => console.log(error));
+
+
+      this.getListaKatedri();
   }
 
   izlistajKatedre(){
@@ -30,11 +37,29 @@ export class UpdateNastavnikComponent implements OnInit {
 
   onSubmit(){
     console.log(this.nastavnik);
+
+    for (let i = 0; i < this.katedre.length; i++) {
+      if (this.selectedKatedra == this.katedre[i].nazivKatedre) {
+        this.katedra = this.katedre[i];
+        console.log(this.katedra);
+      }
+    }
+
+
+    this.nastavnik.katedra=this.katedra;
+
+
     this.nastavnikService.updateNastavnik(this.id, this.nastavnik).subscribe(data=>{
       console.log(data);
       this.izlistajKatedre();
     },
     error=> console.log(error));
   
+  }
+
+  private getListaKatedri() {
+    this.nastavnikService.getKatedreAll().subscribe(data => {
+      this.katedre = data;
+    });
   }
 }

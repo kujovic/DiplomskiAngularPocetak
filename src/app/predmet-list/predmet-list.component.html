@@ -16,7 +16,7 @@
        <!--     <th> Semestar </th>-->
             <th> Katedra </th>
             <th> Skraćeni naziv katedre </th>
-         <!--    <th> Akcije</th> -->
+            <th> </th> 
         </tr>
     </thead>
     <tbody>
@@ -27,11 +27,11 @@
          <!--   <td>   {{ predmet.obavezan}} </td> -->
             <td> {{predmet.katedra.nazivKatedre}}</td>
             <td> {{predmet.katedra.skraceniNazivKatedre}}</td>
-           <!--    <td>      
+              <td>      
                 <button type="button"
                     (click)="updatePredmet(predmet.predmetId)" class="btn btn-outline-primary">Ažuriraj
                 </button>
-              <button type="button"
+            <!--  <button type="button"
                     (click)="deletePredmet(predmet.predmetId)" class="btn btn-outline-danger" style="margin-left: 10px;">Obriši
                 </button> 
             </td> -->

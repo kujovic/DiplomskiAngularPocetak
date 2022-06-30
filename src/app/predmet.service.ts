@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Predmet } from './predmet';
 import { Observable } from 'rxjs';
+import { Katedra } from './katedra';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,7 @@ export class PredmetService {
   private getUrl = "http://localhost:8080/predmet/get";
   private updateUrl = "http://localhost:8080/predmet/update";
   private deleteUrl = "http://localhost:8080/predmet/delete";
+  private getAllKatedreUrl = "http://localhost:8080/katedra/all";
 
   constructor(private httpClient: HttpClient) {}
    
@@ -28,5 +30,8 @@ export class PredmetService {
   }
   deletePredmet(id: number): Observable<Object> {
     return this.httpClient.delete(`${this.deleteUrl}/${id}`);
+  }
+  getKatedreAll(): Observable<Katedra[]>{
+    return this.httpClient.get<Katedra[]>(this.getAllKatedreUrl);
   }
 }

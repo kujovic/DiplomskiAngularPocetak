@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CreateIzvodjacComponent } from './create-izvodjac/create-izvodjac.component';
 import { CreateKatedraComponent } from './create-katedra/create-katedra.component';
+import { CreateNastavnikComponent } from './create-nastavnik/create-nastavnik.component';
 import { IzvodjacInfoComponent } from './izvodjac-info/izvodjac-info.component';
 import { IzvodjacListComponent } from './izvodjac-list/izvodjac-list.component';
 import { IzvodjacMenComponent } from './izvodjac-men/izvodjac-men.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
 
 
   {path: 'nastavnici', component: NastavnikListComponent},
+  {path: 'create-nastavnik', component : CreateNastavnikComponent},
   {path: 'update-nastavnik/:id', component: UpdateNastavnikComponent},
   {path: 'nastavnici/nastavnici', redirectTo: 'nastavnici',pathMatch:'full'},
 

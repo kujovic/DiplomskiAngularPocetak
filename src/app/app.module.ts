@@ -22,6 +22,7 @@ import { SearchpredmetPipe } from './searchpredmet.pipe';
 import { SearchizvodjmenPipe } from './searchizvodjmen.pipe';
 import { KatedraInfoComponent } from './katedra-info/katedra-info.component';
 import { CreateIzvodjacComponent } from './create-izvodjac/create-izvodjac.component';
+import { CreateNastavnikComponent } from './create-nastavnik/create-nastavnik.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { CreateIzvodjacComponent } from './create-izvodjac/create-izvodjac.compo
     SearchpredmetPipe,
     SearchizvodjmenPipe,
     KatedraInfoComponent,
-    CreateIzvodjacComponent
+    CreateIzvodjacComponent,
+    CreateNastavnikComponent
 
     
     

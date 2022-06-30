@@ -31,4 +31,7 @@ deleteNastavnik(nastavnikId: number){
     this.getNastavnici();
     });
 }
+createNastavnik(){
+  this.router.navigate(['create-nastavnik']);
+}
 }
