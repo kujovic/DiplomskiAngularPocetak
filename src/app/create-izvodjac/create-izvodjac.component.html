@@ -12,17 +12,17 @@
         <div>
             <label for="imeNastavnika">Izaberi nastavnika:</label>
             <br>
-            <select name="imeNastavnika" id="imeNastavnika"  [(ngModel)]="selectedNastavnik">
+            <select class="form-select" name="imeNastavnika" id="imeNastavnika"  [(ngModel)]="selectedNastavnik">
                 <option *ngFor="let nastavnik of nastavnici" [ngValue]="nastavnik.imePrezime">
                     {{nastavnik.imePrezime}}
                 </option>
             </select>
             <br>
 
-            <br>
+         
             <label for="vrstaUloge">Izaberi ulogu:</label>
             <br>
-            <select name="vrstaUloge" id="vrstaUloge" [(ngModel)]="selectedUloga">
+            <select class="form-select" name="vrstaUloge" id="vrstaUloge" [(ngModel)]="selectedUloga">
                 <option *ngFor="let uloga of uloge" [ngValue]="uloga.vrstaUloge">
                     {{uloga.vrstaUloge}}
                 </option>

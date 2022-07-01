@@ -16,10 +16,10 @@
             <label> <b> ESPB: </b></label> {{izvodjaci[0]?.predmet?.espb}}
     </div>
     <div>
-        <label> <b> Naziv katedre: </b></label> {{izvodjaci[0]?.nastavnik?.katedra?.nazivKatedre}}
+        <label> <b> Naziv katedre: </b></label> {{izvodjaci[0]?.predmet?.katedra?.nazivKatedre}}
     </div>
     <div>
-        <label> <b> Skraćeni naziv katedre: </b></label> {{izvodjaci[0]?.nastavnik?.katedra?.skraceniNazivKatedre}}
+        <label> <b> Skraćeni naziv katedre: </b></label> {{izvodjaci[0]?.predmet?.katedra?.skraceniNazivKatedre}}
     </div>
 </div>
 
@@ -56,11 +56,11 @@
               <td>{{izvodjac.uloga.vrstaUloge}}</td>
               <td>{{izvodjac.godina.kalendarskaGodina}}</td>  
                 <td> {{izvodjac.predmet.nazivPredmeta}}</td>-->
-                <td>{{izvodjac.nastavnik.imePrezime}}</td>
-                <td>{{izvodjac.nastavnik.status}}</td>
-                <td>{{izvodjac.nastavnik.brojTelefona}}</td>
-                <td>{{izvodjac.uloga.vrstaUloge}}</td>
-             <td><button (click) = "deleteIzvodjac(izvodjac.izvodjacId)"
+                <td *ngIf="izvodjac.nastavnik!=null">{{izvodjac.nastavnik.imePrezime}}</td>
+                <td *ngIf="izvodjac.nastavnik!=null">{{izvodjac.nastavnik.status}}</td>
+                <td *ngIf="izvodjac.nastavnik!=null">{{izvodjac.nastavnik.brojTelefona}}</td>
+                <td *ngIf="izvodjac.nastavnik!=null">{{izvodjac.uloga.vrstaUloge}}</td>
+             <td *ngIf="izvodjac.nastavnik!=null"><button (click) = "deleteIzvodjac(izvodjac.izvodjacId)"
                     class="btn btn-outline-danger">Obriši
                 </button>     
             </td> 

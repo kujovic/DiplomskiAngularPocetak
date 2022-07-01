@@ -4,10 +4,10 @@
 
 <div>
     <div>
-        <label> <b> Naziv katedre: </b></label> {{nastavnici[0].katedra.nazivKatedre}}
+        <label> <b> Naziv katedre: </b></label> {{nastavnici[0]?.katedra?.nazivKatedre}}
     </div>
     <div>
-        <label> <b> Skraćeni naziv katedre: </b></label> {{nastavnici[0].katedra.skraceniNazivKatedre}}
+        <label> <b> Skraćeni naziv katedre: </b></label> {{nastavnici[0]?.katedra?.skraceniNazivKatedre}}
     </div>
 
 
@@ -29,9 +29,9 @@
     </thead>
     <tbody>
        <tr *ngFor="let nastavnik of nastavnici "> 
-            <td> {{nastavnik.imePrezime}}</td>
-            <td>{{nastavnik.brojTelefona}}</td>
-            <td>{{nastavnik.status}}</td>
+            <td> {{nastavnik?.imePrezime}}</td>
+            <td>{{nastavnik?.brojTelefona}}</td>
+            <td>{{nastavnik?.status}}</td>
         </tr>
 
     </tbody>

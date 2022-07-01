@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CreateIzvodjacComponent } from './create-izvodjac/create-izvodjac.component';
 import { CreateKatedraComponent } from './create-katedra/create-katedra.component';
 import { CreateNastavnikComponent } from './create-nastavnik/create-nastavnik.component';
+import { CreatePredmetComponent } from './create-predmet/create-predmet.component';
 import { IzvodjacInfoComponent } from './izvodjac-info/izvodjac-info.component';
 import { IzvodjacListComponent } from './izvodjac-list/izvodjac-list.component';
 import { IzvodjacMenComponent } from './izvodjac-men/izvodjac-men.component';
@@ -28,6 +29,7 @@ const routes: Routes = [
 
 
   {path: 'predmeti', component: PredmetListComponent},
+  {path: 'create-predmet', component : CreatePredmetComponent},
   {path: 'update-predmet/:id', component: UpdatePredmetComponent},
   {path: 'predmeti/predmeti', redirectTo: 'nastavnici',pathMatch:'full'},
 

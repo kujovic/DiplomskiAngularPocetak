@@ -38,5 +38,8 @@ export class IzvodjacListComponent implements OnInit {
     this.router.navigate(['create-izvodjac']);
   
   }
+  createPredmet(){
+    this.router.navigate(['create-predmet']);
+  }
 }
 

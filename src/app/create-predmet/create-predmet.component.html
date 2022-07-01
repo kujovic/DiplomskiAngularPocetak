@@ -1,0 +1,85 @@
+<div class="col-md-6 offset-md-3">
+    <br>
+    <h3> Kreiraj predmet</h3>
+    <br>
+    <form (ngSubmit)="onSubmit()">
+
+        <!--
+        <div class="form-group">
+            <label>Id katedre</label>
+            <input type="text" class="form-control" id="katedraId" [(ngModel)]="katedra.katedraId" name="katedraId">
+        </div>
+-->
+        <div class="form-group">
+            <label>Naziv predmeta</label>
+            <input type="text" class="form-control" id="nazivPredmeta" [(ngModel)]="predmet.nazivPredmeta"
+                name="nazivPredmeta">
+        </div>
+
+        <div class="form-group">
+            <label for="obavezan">Obavezan:</label>
+            <br>
+            <select class="form-select" name="obavezan" id="obavezan" [(ngModel)]="selectedObavezan">
+                <option>
+                    obavezan
+                </option>
+                <option>
+                    izborni
+                </option>
+            </select>
+        </div>
+
+
+        <div class="form-group">
+            <label for="semestar">Izaberi semestar:</label>
+            <br>
+            <select class="form-select" name="semestar" id="semestar" [(ngModel)]="selectedSemestar">
+                <option>
+                    1
+                </option>
+                <option>
+                    2
+                </option>
+                <option>
+                    3
+                </option>
+                <option>
+                    4
+                </option>
+                <option>
+                    5
+                </option>
+                <option>
+                    6
+                </option>
+                <option>
+                    7
+                </option>
+                <option>
+                    8
+                </option>
+            </select>
+        </div>
+
+        
+        <div class="form-group">
+            <label>ESPB:</label>
+            <input type="number" class="form-control" id="espb" [(ngModel)]="predmet.espb" name="espb">
+        </div>
+        
+
+
+        <div class="form-group">
+            <label for="katedra">Izaberi katedru:</label>
+            <br>
+            <select class="form-select" name="katedra" id="katedra" [(ngModel)]="selectedKatedra">
+                <option *ngFor="let katedra of katedre" [ngValue]="katedra.nazivKatedre">
+                    {{katedra.nazivKatedre}}
+                </option>
+            </select>
+        </div>
+        <br>
+        <br>
+        <button class="btn btn-success" type="submit">Sačuvaj</button>
+    </form>
+</div>

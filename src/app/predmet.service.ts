@@ -14,6 +14,7 @@ export class PredmetService {
   private updateUrl = "http://localhost:8080/predmet/update";
   private deleteUrl = "http://localhost:8080/predmet/delete";
   private getAllKatedreUrl = "http://localhost:8080/katedra/all";
+  private createUrl="http://localhost:8080/predmet/add";
 
   constructor(private httpClient: HttpClient) {}
    
@@ -33,5 +34,9 @@ export class PredmetService {
   }
   getKatedreAll(): Observable<Katedra[]>{
     return this.httpClient.get<Katedra[]>(this.getAllKatedreUrl);
+  }
+
+  createPredmet(predmet: Predmet): Observable<Predmet> {
+    return this.httpClient.post<Predmet>(this.createUrl, predmet);
   }
 }

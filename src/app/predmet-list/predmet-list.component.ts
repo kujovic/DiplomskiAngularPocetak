@@ -34,4 +34,7 @@ export class PredmetListComponent implements OnInit {
       });
   }
 
+  createPredmet(){
+    this.router.navigate(['create-predmet']);
+  }
 }

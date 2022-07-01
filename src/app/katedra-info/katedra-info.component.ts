@@ -12,7 +12,7 @@ import { Nastavnik } from '../nastavnik';
 export class KatedraInfoComponent implements OnInit {
 
   id!: number;
-  nastavnici!: Nastavnik[];
+  nastavnici: Nastavnik[]=new Array();
   katedra! :Katedra;
 
 
