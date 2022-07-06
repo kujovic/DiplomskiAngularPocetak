@@ -31,7 +31,7 @@
 
         <label for="katedra">Izaberi katedru:</label>
             <br>
-            <select name="katedra" id="katedra"  [(ngModel)]="selectedKatedra">
+            <select class="form-select" name="katedra" id="katedra"  [(ngModel)]="selectedKatedra">
                 <option *ngFor="let katedra of katedre" [ngValue]="katedra.nazivKatedre">
                     {{katedra.nazivKatedre}}
                 </option>
